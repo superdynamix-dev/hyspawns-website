@@ -1,0 +1,2629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HySpawns - All Hytale Spawn Entity IDs</title>
+  <meta name="description" content="Searchable reference for all Hytale spawnable entities. Filter by category, zone, or behavior. Copy /npc spawn commands with one click.">
+  <meta property="og:title" content="HySpawns - Hytale Spawn Reference">
+  <meta property="og:description" content="Free searchable reference for all 413 Hytale spawnable entities. Filter, search, copy spawn commands.">
+  <meta property="og:image" content="https://hyspawns.com/favicon.png">
+  <meta property="og:url" content="https://hyspawns.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HySpawns">
+  <link rel="canonical" href="https://hyspawns.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HySpawns - Hytale Spawn Reference">
+  <meta name="twitter:description" content="Free searchable reference for all 413 Hytale spawnable entities.">
+  <meta name="twitter:image" content="https://hyspawns.com/favicon.png">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Scruby Companion">
+  <meta name="keywords" content="hytale spawn, hytale entities, hytale npc, hytale spawn commands, hytale mob list, hytale creature ids, hytale modding, hytale server spawns, hytale entity catalog">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "HySpawns - Hytale Spawn Catalog",
+    "url": "https://hyspawns.com/",
+    "description": "Searchable reference for all Hytale spawnable entity IDs. Filter by category, zone, or behavior. Copy /npc spawn commands with one click.",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Any",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    "author": {"@type": "Organization", "name": "Scruby Companion", "url": "https://www.curseforge.com/hytale/mods/scruby-companion"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I spawn entities in Hytale?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the built-in server command: /npc spawn EntityId to spawn an entity at your location. Use /npc spawn EntityId ~ ~ ~ to spawn at specific coordinates. Example: /npc spawn Bear_Grizzly"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many spawnable entities does Hytale have?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hytale has 413 unique spawnable entity IDs across 8 categories: Creatures (84), Intelligent (121), Undead (140), Aquatic (30), Avian (20), Elemental (11), Boss (2), and Void (5)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the format of Hytale entity IDs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hytale entity IDs use underscores to separate words. For example: Bear_Grizzly, Skeleton_Frost_Knight, Dragon_Fire. They can be used with the /npc spawn command or in NPC role JSON configs as NPCId."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I add custom NPCs to a Hytale mod?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Hytale, NPCs are defined through JSON role configs in the Server/reference-assets directory. Each NPC has a role JSON that defines its behavior, stats, weapons, and spawn rules. Use the NPCId field to reference entities in your mod configs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is HySpawns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HySpawns is a free, open-source reference tool that catalogs all 413 spawnable Hytale entity IDs. It features search, filtering by category, zone, and behavior, one-click copy in multiple formats, dark/light mode, and works offline as a single HTML file."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <style>
+    /* ===== RESET ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* ===== DESIGN TOKENS ===== */
+    :root {
+      /* Backgrounds */
+      --bg: #131316;
+      --bg2: #1a1a1f;
+      --bg3: #212127;
+      --bg-hover: rgba(255,255,255,0.04);
+      --bg-active: rgba(255,255,255,0.07);
+
+      /* Borders */
+      --border: rgba(255,255,255,0.08);
+      --border-h: rgba(255,255,255,0.14);
+
+      /* Text */
+      --t1: rgba(255,255,255,0.95);
+      --t2: rgba(255,255,255,0.68);
+      --t3: rgba(255,255,255,0.42);
+
+      /* Semantic colors */
+      --mono: #e2e8f0;
+      --accent: #f97316;
+      --accent-dim: rgba(249,115,22,0.12);
+      --success: #22c55e;
+      --coffee: #ffdd00;
+
+      /* Category colors */
+      --cat-creature: #22c55e;
+      --cat-intelligent: #3b82f6;
+      --cat-undead: #a855f7;
+      --cat-aquatic: #06b6d4;
+      --cat-avian: #f59e0b;
+      --cat-elemental: #f97316;
+      --cat-boss: #ef4444;
+      --cat-void: #8b5cf6;
+
+      /* Behavior colors */
+      --beh-hostile: #ef4444;
+      --beh-passive: #22c55e;
+      --beh-neutral: #f59e0b;
+      --beh-tameable: #14b8a6;
+      --beh-boss: #ef4444;
+
+      /* Font stacks */
+      --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Cascadia Code', 'Consolas', 'SF Mono', monospace;
+    }
+
+    /* ===== LIGHT THEME ===== */
+    [data-theme="light"] {
+      --bg: #f4f4f7;
+      --bg2: #ffffff;
+      --bg3: #e8eaef;
+      --bg-hover: rgba(0,0,0,0.03);
+      --bg-active: rgba(0,0,0,0.06);
+      --border: rgba(0,0,0,0.10);
+      --border-h: rgba(0,0,0,0.18);
+      --t1: #0a0f1a;
+      --t2: #3b4252;
+      --t3: #6b7688;
+      --mono: #1a1f2e;
+      --accent: #c2410c;
+      --accent-dim: rgba(194,65,12,0.10);
+      --success: #148a3a;
+      --coffee: #8a5200;
+    }
+
+    /* Light-mode category tags */
+    [data-theme="light"] .cat-tag.creature { color: #166534; background: rgba(34,197,94,0.12); }
+    [data-theme="light"] .cat-tag.intelligent { color: #1e40af; background: rgba(59,130,246,0.12); }
+    [data-theme="light"] .cat-tag.undead { color: #6b21a8; background: rgba(168,85,247,0.12); }
+    [data-theme="light"] .cat-tag.aquatic { color: #0e7490; background: rgba(6,182,212,0.12); }
+    [data-theme="light"] .cat-tag.avian { color: #92400e; background: rgba(245,158,11,0.12); }
+    [data-theme="light"] .cat-tag.elemental { color: #9a3412; background: rgba(249,115,22,0.12); }
+    [data-theme="light"] .cat-tag.boss { color: #991b1b; background: rgba(239,68,68,0.12); }
+    [data-theme="light"] .cat-tag.void { color: #5b21b6; background: rgba(139,92,246,0.12); }
+
+    /* Light-mode behavior tags */
+    [data-theme="light"] .beh-tag.hostile { color: #991b1b; background: rgba(239,68,68,0.12); }
+    [data-theme="light"] .beh-tag.passive { color: #166534; background: rgba(34,197,94,0.12); }
+    [data-theme="light"] .beh-tag.neutral { color: #92400e; background: rgba(245,158,11,0.12); }
+    [data-theme="light"] .beh-tag.tameable { color: #0f766e; background: rgba(20,184,166,0.12); }
+    [data-theme="light"] .beh-tag.boss { color: #991b1b; background: rgba(239,68,68,0.12); }
+
+    /* Light-mode category group header tints */
+    [data-theme="light"] .action-group[data-cat="Creature"] .action-group-header { background: rgba(34,197,94,0.07); }
+    [data-theme="light"] .action-group[data-cat="Intelligent"] .action-group-header { background: rgba(59,130,246,0.07); }
+    [data-theme="light"] .action-group[data-cat="Undead"] .action-group-header { background: rgba(168,85,247,0.07); }
+    [data-theme="light"] .action-group[data-cat="Aquatic"] .action-group-header { background: rgba(6,182,212,0.07); }
+    [data-theme="light"] .action-group[data-cat="Avian"] .action-group-header { background: rgba(245,158,11,0.07); }
+    [data-theme="light"] .action-group[data-cat="Elemental"] .action-group-header { background: rgba(249,115,22,0.07); }
+    [data-theme="light"] .action-group[data-cat="Boss"] .action-group-header { background: rgba(239,68,68,0.07); }
+    [data-theme="light"] .action-group[data-cat="Void"] .action-group-header { background: rgba(139,92,246,0.07); }
+
+    /* Light-mode copy icon */
+    [data-theme="light"] .copy-icon { color: rgba(0,0,0,0.18); }
+    [data-theme="light"] .entity-row:hover .copy-icon { color: rgba(0,0,0,0.4); }
+    [data-theme="light"] .copy-icon:hover { color: var(--accent) !important; }
+
+    /* Light-mode scrollbar */
+    [data-theme="light"] .main::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); }
+    [data-theme="light"] .main::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.18); }
+
+    /* Light-mode toast */
+    [data-theme="light"] .toast { box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+
+    /* Light-mode BMC button */
+    [data-theme="light"] .bmc-fixed { color: #92400e; border-color: rgba(161,98,7,0.2); }
+    [data-theme="light"] .bmc-fixed:hover { box-shadow: 0 0 12px rgba(161,98,7,0.2); background: rgba(161,98,7,0.06); }
+
+    /* Light-mode copy popup */
+    [data-theme="light"] .copy-popup { box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+
+    /* Light-mode mobile sidebar shadow */
+    [data-theme="light"] .sidebar.open { box-shadow: 4px 0 20px rgba(0,0,0,0.12); }
+
+    /* Light-mode entity ID — heavier weight for readability */
+    [data-theme="light"] .entity-id { font-weight: 600; }
+
+    /* Light-mode entity rows — subtle separation */
+    [data-theme="light"] .entity-row { border-bottom: 1px solid rgba(0,0,0,0.04); }
+    [data-theme="light"] .entity-row:hover { background: rgba(0,0,0,0.02); }
+
+    /* Light-mode header */
+    [data-theme="light"] .header { box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+
+    /* Light-mode sidebar */
+    [data-theme="light"] .sidebar { border-right-color: rgba(0,0,0,0.08); }
+
+    /* Light-mode sidebar active item */
+    [data-theme="light"] .sidebar-item.active { background: var(--accent-dim); color: var(--accent); }
+    [data-theme="light"] .sidebar-item:hover { background: rgba(0,0,0,0.03); }
+
+    /* Light-mode search bar */
+    [data-theme="light"] .search-input { background: var(--bg3); border-color: rgba(0,0,0,0.08); }
+    [data-theme="light"] .search-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
+
+    /* Light-mode header "by" link hover */
+    [data-theme="light"] .header-by a:hover { color: #9a3412; }
+
+    /* ===== THEME TOGGLE BUTTON ===== */
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      height: auto;
+      font-size: 13px;
+      color: var(--t2);
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 3px 10px;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+      line-height: 1;
+      font-family: var(--font-sans);
+    }
+    .theme-toggle:hover { border-color: var(--border-h); color: var(--t1); }
+
+    /* ===== BASE ===== */
+    html { font-size: 16px; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--t1);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow: hidden;
+    }
+
+    /* ===== LAYOUT ===== */
+    .layout {
+      display: grid;
+      grid-template-columns: 232px 1fr;
+      grid-template-rows: 52px 1fr;
+      height: 100vh;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 16px;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      z-index: 40;
+      height: 52px;
+      min-height: 52px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .hamburger {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--t2);
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.15s;
+    }
+    .hamburger:hover { border-color: var(--border-h); color: var(--t1); }
+
+    .logo-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #f97316, #ef4444);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    h1.logo-text {
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+    }
+    .logo-text {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--t1);
+      white-space: nowrap;
+    }
+
+    .logo-subtitle {
+      font-size: 10px;
+      font-weight: 400;
+      color: var(--t3);
+      display: block;
+      margin-top: -2px;
+    }
+
+    .header-by {
+      font-size: 12px;
+      color: var(--t3);
+      white-space: nowrap;
+    }
+    .header-by a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .header-by a:hover { color: #fb923c; }
+
+    /* Search container */
+    .header-center {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 0 20px;
+      min-width: 0;
+    }
+
+    .search-container {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 13px;
+      color: var(--t3);
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 7px 70px 7px 34px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--t1);
+      font-family: var(--font-sans);
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .search-input::placeholder { color: var(--t3); }
+    .search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-dim), 0 0 12px rgba(249,115,22,0.08);
+    }
+
+    .search-kbd {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      pointer-events: none;
+    }
+    .search-kbd kbd {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      color: var(--t3);
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 5px;
+      line-height: 1.4;
+    }
+
+    /* Header right */
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .counter-badge {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--t2);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 3px 10px;
+      white-space: nowrap;
+    }
+
+    .gh-link {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--t2);
+      text-decoration: none;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 3px 10px;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .gh-link:hover { border-color: var(--border-h); color: var(--t1); }
+    .gh-link svg { width: 14px; height: 14px; fill: currentColor; }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      background: var(--bg2);
+      border-right: 1px solid var(--border);
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 12px 0;
+      scrollbar-width: none;
+    }
+    .sidebar::-webkit-scrollbar { display: none; }
+
+    .sidebar-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--t3);
+      padding: 8px 16px 4px;
+    }
+
+    .sidebar-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 8px 12px;
+    }
+
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 6px;
+      margin: 0 6px;
+      font-size: 12.5px;
+      color: var(--t2);
+      cursor: pointer;
+      transition: all 0.12s;
+      user-select: none;
+    }
+    .sidebar-item:hover { background: var(--bg-hover); color: var(--t1); }
+    .sidebar-item.active { background: var(--accent-dim); color: var(--t1); }
+
+    .sidebar-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .sidebar-count {
+      margin-left: auto;
+      font-size: 10px;
+      color: var(--t3);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .sidebar-item.active .sidebar-count { color: var(--t2); }
+
+    .sidebar-emoji {
+      font-size: 12px;
+      flex-shrink: 0;
+      width: 16px;
+      text-align: center;
+    }
+
+    /* Copy format items */
+    .sidebar-format {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 6px;
+      margin: 0 6px;
+      font-size: 12px;
+      font-family: var(--font-mono);
+      color: var(--t2);
+      cursor: pointer;
+      transition: all 0.12s;
+      user-select: none;
+    }
+    .sidebar-format:hover { background: var(--bg-hover); color: var(--t1); }
+    .sidebar-format.active { background: var(--accent-dim); color: var(--accent); }
+
+    .sidebar-radio {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid var(--t3);
+      flex-shrink: 0;
+      position: relative;
+    }
+    .sidebar-format.active .sidebar-radio {
+      border-color: var(--accent);
+    }
+    .sidebar-format.active .sidebar-radio::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .main {
+      padding: 20px 28px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background: var(--bg);
+    }
+
+    /* ===== VIEW BAR ===== */
+    .view-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .view-toggle {
+      display: inline-flex;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .view-btn {
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--t2);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: var(--font-sans);
+    }
+    .view-btn:hover { color: var(--t1); background: var(--bg-hover); }
+    .view-btn.active {
+      color: var(--t1);
+      background: var(--bg-active);
+    }
+    .view-btn + .view-btn { border-left: 1px solid var(--border); }
+
+    .view-info {
+      font-size: 12px;
+      color: var(--t3);
+    }
+
+    /* ===== FILTER PILLS ===== */
+    .filter-pills {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .filter-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--t2);
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.15s;
+      user-select: none;
+      font-family: var(--font-sans);
+    }
+    .filter-pill:hover { border-color: var(--border-h); color: var(--t1); }
+    .filter-pill.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+
+    .filter-pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    .filter-pill-count {
+      font-size: 10px;
+      color: var(--t3);
+    }
+    .filter-pill.active .filter-pill-count { color: var(--accent); opacity: 0.7; }
+
+    .filter-pill-emoji {
+      font-size: 10px;
+    }
+
+    /* ===== SUBCATEGORY PILLS ===== */
+    .subcat-pills {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .subcat-pills:empty { display: none; }
+
+    .subcat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      font-size: 10.5px;
+      font-weight: 500;
+      color: var(--t2);
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      cursor: pointer;
+      transition: all 0.15s;
+      user-select: none;
+      font-family: var(--font-sans);
+    }
+    .subcat-pill:hover { border-color: var(--border-h); color: var(--t1); }
+    .subcat-pill.active { background: var(--subcat-active-bg, rgba(34,197,94,0.10)); border-color: var(--subcat-color, var(--cat-creature)); color: var(--subcat-color, var(--cat-creature)); }
+
+    .subcat-pill-count {
+      font-size: 9px;
+      color: var(--t3);
+    }
+    .subcat-pill.active .subcat-pill-count { color: var(--subcat-color, var(--cat-creature)); opacity: 0.7; }
+
+    /* Active filter tags (removable) */
+    .active-filters {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .active-filters:empty { display: none; }
+
+    .active-filter-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 8px 3px 10px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid var(--accent);
+      border-radius: 16px;
+      cursor: pointer;
+      transition: all 0.15s;
+      user-select: none;
+      font-family: var(--font-sans);
+    }
+    .active-filter-tag:hover { background: rgba(249,115,22,0.2); }
+    .active-filter-tag .x { font-size: 13px; font-weight: 700; line-height: 1; }
+
+    /* ===== CONTENT AREA ===== */
+    #content {
+      min-height: 200px;
+    }
+
+    /* ===== GROUP HEADERS ===== */
+    .action-group {
+      margin-bottom: 4px;
+    }
+
+    .action-group-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.12s;
+      user-select: none;
+    }
+    .action-group-header:hover { background: var(--bg-hover); }
+
+    .action-group-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .action-group-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--t1);
+    }
+
+    .action-group-count {
+      font-size: 11px;
+      color: var(--t3);
+      margin-left: 4px;
+    }
+
+    .action-group-chevron {
+      margin-left: auto;
+      color: var(--t3);
+      transition: transform 0.2s ease;
+      display: inline-flex;
+    }
+    .action-group-chevron svg { width: 14px; height: 14px; }
+    .action-group.collapsed .action-group-chevron { transform: rotate(-90deg); }
+
+    .action-group-body {
+      overflow: hidden;
+      transition: max-height 0.2s ease;
+    }
+
+    /* Group tints by category */
+    .action-group[data-cat="Creature"] .action-group-header { background: rgba(34,197,94,0.06); }
+    .action-group[data-cat="Intelligent"] .action-group-header { background: rgba(59,130,246,0.06); }
+    .action-group[data-cat="Undead"] .action-group-header { background: rgba(168,85,247,0.06); }
+    .action-group[data-cat="Aquatic"] .action-group-header { background: rgba(6,182,212,0.06); }
+    .action-group[data-cat="Avian"] .action-group-header { background: rgba(245,158,11,0.06); }
+    .action-group[data-cat="Elemental"] .action-group-header { background: rgba(249,115,22,0.06); }
+    .action-group[data-cat="Boss"] .action-group-header { background: rgba(239,68,68,0.06); }
+    .action-group[data-cat="Void"] .action-group-header { background: rgba(139,92,246,0.06); }
+
+    /* Zone group tints */
+    .action-group[data-zone] .action-group-header { background: rgba(249,115,22,0.04); }
+
+    /* ===== ENTITY ROWS ===== */
+    .entity-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 6px;
+      border-left: 3px solid transparent;
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+      transition: all 0.15s ease;
+      cursor: pointer;
+      margin-bottom: 2px;
+    }
+    .entity-row:hover { background: rgba(255,255,255,0.05); border-left-color: var(--accent); }
+
+    .entity-id {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .copy-icon {
+      color: rgba(255,255,255,0.25);
+      cursor: pointer;
+      transition: color 0.15s;
+      display: inline-flex;
+      flex-shrink: 0;
+      padding: 2px;
+    }
+    .copy-icon svg { width: 13px; height: 13px; }
+    .entity-row:hover .copy-icon { color: rgba(255,255,255,0.45); }
+    .copy-icon:hover { color: var(--accent) !important; }
+    .copy-icon.copied { color: var(--success) !important; }
+
+    /* ===== CATEGORY TAGS ===== */
+    .cat-tag {
+      display: inline-flex;
+      align-items: center;
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 2px 6px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      line-height: 1.3;
+    }
+
+    .cat-tag.creature { color: var(--cat-creature); background: rgba(34,197,94,0.12); }
+    .cat-tag.intelligent { color: var(--cat-intelligent); background: rgba(59,130,246,0.12); }
+    .cat-tag.undead { color: var(--cat-undead); background: rgba(168,85,247,0.12); }
+    .cat-tag.aquatic { color: var(--cat-aquatic); background: rgba(6,182,212,0.12); }
+    .cat-tag.avian { color: var(--cat-avian); background: rgba(245,158,11,0.12); }
+    .cat-tag.elemental { color: var(--cat-elemental); background: rgba(249,115,22,0.12); }
+    .cat-tag.boss { color: var(--cat-boss); background: rgba(239,68,68,0.12); }
+    .cat-tag.void { color: var(--cat-void); background: rgba(139,92,246,0.12); }
+
+    /* ===== BEHAVIOR TAGS ===== */
+    .beh-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 2px 6px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      line-height: 1.3;
+    }
+
+    .beh-tag.hostile { color: var(--beh-hostile); background: rgba(239,68,68,0.12); }
+    .beh-tag.passive { color: var(--beh-passive); background: rgba(34,197,94,0.12); }
+    .beh-tag.neutral { color: var(--beh-neutral); background: rgba(245,158,11,0.12); }
+    .beh-tag.boss { color: var(--beh-boss); background: rgba(239,68,68,0.12); }
+
+    /* ===== HP + ZONE TAGS ===== */
+    .hp-tag {
+      font-size: 10px;
+      color: var(--t3);
+      flex-shrink: 0;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .zone-tags {
+      display: flex;
+      gap: 3px;
+      flex-shrink: 0;
+      flex-wrap: nowrap;
+    }
+
+    .zone-tag {
+      font-size: 9px;
+      color: var(--t3);
+      background: var(--bg-active);
+      padding: 1px 5px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+
+    /* ===== EMPTY STATE ===== */
+    .empty-state {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .empty-state.visible { display: flex; }
+
+    .empty-state-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+      opacity: 0.3;
+    }
+
+    .empty-state-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--t2);
+      margin-bottom: 8px;
+    }
+
+    .empty-state-text {
+      font-size: 13px;
+      color: var(--t3);
+      margin-bottom: 20px;
+      max-width: 360px;
+    }
+
+    .empty-state-suggestions {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .suggestion-pill {
+      font-size: 11px;
+      color: var(--t2);
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 12px;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: var(--font-sans);
+    }
+    .suggestion-pill:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ===== TOAST ===== */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--bg3);
+      border: 1px solid var(--border-h);
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 12px;
+      color: var(--t1);
+      font-family: var(--font-mono);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+      z-index: 100;
+      max-width: 420px;
+    }
+    .toast.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== BUY ME A COFFEE BUTTON ===== */
+    .bmc-fixed {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--coffee);
+      text-decoration: none;
+      transition: all 0.15s;
+      z-index: 50;
+    }
+    .bmc-fixed:hover {
+      border-color: var(--coffee);
+      box-shadow: 0 0 12px rgba(255,221,0,0.15);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      padding: 32px 0 16px;
+      border-top: 1px solid var(--border);
+      margin-top: 32px;
+      font-size: 11px;
+      color: var(--t3);
+      line-height: 1.7;
+    }
+    .footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .footer a:hover { text-decoration: underline; }
+
+    /* ===== COPY POPUP (mobile long-press) ===== */
+    .copy-popup {
+      position:fixed; z-index:200;
+      background:var(--bg3); border:1px solid var(--border);
+      border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.5);
+      overflow:hidden; min-width:160px;
+    }
+    .copy-popup-item {
+      padding:10px 14px; font-size:13px; color:var(--t2);
+      cursor:pointer; transition:background 0.1s;
+    }
+    .copy-popup-item:hover, .copy-popup-item:active {
+      background:var(--bg-hover); color:var(--t1);
+    }
+
+    /* ===== SCROLLBAR (main area) ===== */
+    .main::-webkit-scrollbar { width: 6px; }
+    .main::-webkit-scrollbar-track { background: transparent; }
+    .main::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 3px; }
+    .main::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.14); }
+
+    /* ===== CONTEST BANNER ===== */
+    .contest-banner {
+      display:flex; align-items:center; justify-content:center; gap:14px;
+      background:linear-gradient(135deg, rgba(240,192,64,0.08), rgba(6,182,212,0.08));
+      border:1px solid rgba(240,192,64,0.15); border-radius:8px;
+      padding:12px 16px; margin-bottom:16px;
+      text-align:center;
+    }
+    .banner-trophy { font-size:24px; flex-shrink:0; }
+    .banner-cta {
+      display:inline-flex; align-items:center; gap:6px;
+      padding:8px 18px; border-radius:7px;
+      background:linear-gradient(135deg, #f0c040, #e8a000);
+      color:#000; font-size:12px; font-weight:700;
+      text-decoration:none; white-space:nowrap; transition:all 0.15s;
+    }
+    .banner-cta:hover { transform:translateY(-1px); box-shadow:0 4px 16px rgba(240,192,64,0.25); }
+    .banner-close {
+      color:var(--t3); cursor:pointer; font-size:18px; padding:4px 8px;
+      background:none; border:none; transition:color 0.15s; flex-shrink:0;
+    }
+    .banner-close:hover { color:var(--t1); }
+    .contest-banner.hidden { display:none; }
+
+    /* ===== REDUCED MOTION ===== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+
+    /* ===== RESPONSIVE: MOBILE ===== */
+    @media (max-width: 768px) {
+      .layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+      }
+
+      .sidebar {
+        display: none;
+      }
+      .sidebar.open {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 260px;
+        height: 100vh;
+        z-index: 50;
+        padding-top: 60px;
+        box-shadow: 4px 0 20px rgba(0,0,0,0.5);
+      }
+
+      .hamburger {
+        display: flex;
+        order: 0;
+      }
+
+      .header {
+        flex-wrap: wrap;
+        height: auto;
+        min-height: auto;
+        padding: 8px 12px;
+        gap: 8px;
+      }
+
+      .header-left {
+        order: 1;
+        gap: 8px;
+      }
+
+      .logo-subtitle { display: none; }
+      .header-by { display: none; }
+      .counter-badge { display: none; }
+      .gh-link { display: none; }
+
+      .header-right {
+        order: 2;
+        margin-left: auto;
+      }
+
+      .header-center {
+        order: 10;
+        width: 100%;
+        flex-basis: 100%;
+        padding: 0;
+      }
+
+      .search-container {
+        max-width: 100%;
+      }
+
+      .search-input {
+        width: 100%;
+        padding-right: 12px;
+      }
+
+      .search-kbd { display: none; }
+
+      .main {
+        padding: 12px 10px;
+      }
+
+      .entity-row {
+        padding: 10px 8px;
+        gap: 6px;
+      }
+
+      .entity-id {
+        font-size: 11px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 55vw;
+        min-width: 0;
+      }
+
+      /* Hide zone tags and HP on mobile to save space */
+      .zone-tags { display: none; }
+      .hp-tag { display: none; }
+
+      .filter-pills {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 4px;
+      }
+      .filter-pills::-webkit-scrollbar { display: none; }
+
+      .subcat-pills {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 4px;
+      }
+      .subcat-pills::-webkit-scrollbar { display: none; }
+
+      .view-bar {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .view-info { display: none; }
+
+      .toast {
+        left: 12px;
+        right: 12px;
+        max-width: none;
+        bottom: 16px;
+      }
+
+      .bmc-fixed {
+        bottom: 8px;
+        right: 8px;
+        padding: 6px 10px;
+        font-size: 10px;
+      }
+
+      .action-group-header {
+        padding: 8px 8px;
+        gap: 6px;
+      }
+
+      .copy-popup {
+        left: 12px !important;
+        right: 12px !important;
+        width: auto !important;
+      }
+
+      /* --- Contest banner: stack vertically --- */
+      .contest-banner { flex-direction: column; text-align: center; gap: 10px; }
+      .banner-cta { width: 100%; justify-content: center; }
+
+      html, body {
+        overflow-x: hidden;
+        max-width: 100vw;
+      }
+    }
+
+    /* ===== SITE SWITCHER ===== */
+    .site-switcher { position: relative; display: inline-flex; align-items: center; gap: 10px; }
+    .ss-btn {
+      display: inline-flex; align-items: stretch; cursor: pointer; border-radius: 7px;
+      overflow: hidden; height: 32px; border: none; background: none; padding: 0;
+    }
+    .ss-btn-label {
+      font-size: 13px; font-weight: 700; color: var(--t1); padding: 0 10px;
+      display: flex; align-items: center; background: var(--accent-dim);
+      font-family: var(--font-sans);
+    }
+    .ss-btn-chevron {
+      width: 28px; display: flex; align-items: center; justify-content: center;
+      background: rgba(249,115,22,0.25); transition: background 0.15s;
+    }
+    .ss-btn:hover .ss-btn-chevron { background: rgba(249,115,22,0.35); }
+    .ss-btn-chevron svg { width: 10px; height: 10px; color: var(--accent); transition: transform 0.2s; }
+    .site-switcher.open .ss-btn-chevron svg { transform: rotate(180deg); }
+    .site-switcher-menu {
+      display: none; position: absolute; top: calc(100% + 5px); left: 0; right: 0;
+      flex-direction: column; background: var(--bg2); border-radius: 8px; overflow: hidden;
+      border: 1px solid var(--border); z-index: 100;
+    }
+    .site-switcher-menu.open { display: flex; }
+    .ss-row {
+      padding: 8px 10px; display: flex; align-items: center; gap: 7px;
+      text-decoration: none; transition: background 0.15s; cursor: pointer;
+    }
+    .ss-row:hover { background: var(--bg-hover); }
+    .ss-icon {
+      width: 24px; height: 24px; border-radius: 6px;
+      display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0;
+    }
+    .ss-name { font-size: 12px; font-weight: 600; }
+    .ss-count { font-size: 9px; color: var(--t3); }
+    [data-theme="light"] .site-switcher-menu { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+<div class="contest-banner" id="contest-banner">
+  <span class="banner-trophy">🏆</span>
+  <span>Built for the <strong>Hytale New Worlds Modding Contest 2026</strong></span>
+  <a href="https://www.curseforge.com/hytale/mods/scruby-companion" class="banner-cta">See Our Entry →</a>
+  <button class="banner-close" id="banner-close" aria-label="Close banner">✕</button>
+</div>
+  <div class="layout">
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="header-left">
+        <button class="hamburger" id="hamburger" aria-label="Toggle sidebar">&#9776;</button>
+        <div class="site-switcher" id="site-switcher">
+          <div class="logo-icon" aria-hidden="true">&#129370;</div>
+          <button class="ss-btn" id="ss-btn" aria-label="Switch site">
+            <span class="ss-btn-label">HySpawns</span>
+            <span class="ss-btn-chevron"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 6l4 4 4-4"/></svg></span>
+          </button>
+          <div class="site-switcher-menu" id="ss-menu">
+            <a class="ss-row" href="https://hysounds.com" rel="noopener" style="border-left:4px solid rgba(6,182,212,0.4);background:rgba(6,182,212,0.03);">
+              <span class="ss-icon" style="background:#06b6d4;">&#9835;</span>
+              <span class="ss-name" style="color:rgba(6,182,212,0.7);flex:1;">HySounds</span>
+              <span class="ss-count">753 sounds</span>
+            </a>
+          </div>
+        </div>
+        <span class="logo-subtitle">Hytale Spawn Catalog</span>
+        <span class="header-by">&middot; by <a href="https://www.curseforge.com/hytale/mods/scruby-companion" target="_blank" rel="noopener">Scruby Companion</a></span>
+      </div>
+
+      <div class="header-center">
+        <div class="search-container">
+          <span class="search-icon" aria-hidden="true">&#128269;</span>
+          <input class="search-input" id="search" type="text" placeholder="Search HySpawns..." autocomplete="off" spellcheck="false" aria-label="Search entities">
+          <span class="search-kbd"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <span class="counter-badge" id="counter-badge">413 entities</span>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode" title="Switch to light mode">&#9728;&#65039;</button>
+        <a class="gh-link" href="https://github.com/superdynamix-dev/hyspawns-website" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </header>
+
+    <!-- ===== SIDEBAR ===== -->
+    <nav class="sidebar" id="sidebar">
+
+      <!-- COPY FORMAT -->
+      <div class="sidebar-label">Copy Format</div>
+
+      <div class="sidebar-format active" data-format="spawn">
+        <span class="sidebar-radio"></span>
+        /npc spawn &lt;id&gt;
+      </div>
+      <div class="sidebar-format" data-format="coords">
+        <span class="sidebar-radio"></span>
+        /npc spawn &lt;id&gt; ~ ~ ~
+      </div>
+      <div class="sidebar-format" data-format="json">
+        <span class="sidebar-radio"></span>
+        "NPCId": "&lt;id&gt;"
+      </div>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- BY CATEGORY (populated by JS) -->
+      <div class="sidebar-label">Category</div>
+      <div id="sidebar-categories"></div>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- BY ZONE (populated by JS) -->
+      <div class="sidebar-label">Zone</div>
+      <div id="sidebar-zones"></div>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- BY BEHAVIOR (populated by JS) -->
+      <div class="sidebar-label">Behavior</div>
+      <div id="sidebar-behaviors"></div>
+
+    </nav>
+
+    <!-- ===== MAIN ===== -->
+    <main class="main" id="main">
+
+      <!-- View bar -->
+      <div class="view-bar">
+        <div class="view-toggle">
+          <button class="view-btn active" data-view="category">By Category</button>
+          <button class="view-btn" data-view="zone">By Zone</button>
+        </div>
+        <span class="view-info" id="view-info">Grouped by category</span>
+      </div>
+
+      <!-- Category filter pills (populated by JS) -->
+      <div class="filter-pills" id="cat-pills"></div>
+
+      <!-- Subcategory filter pills (populated by JS) -->
+      <div class="subcat-pills" id="subcat-pills"></div>
+
+      <!-- Active filters (populated by JS) -->
+      <div class="active-filters" id="active-filters"></div>
+
+      <!-- Content area (populated by JS) -->
+      <div id="content"></div>
+
+      <noscript>
+      <div class="seo-content" style="padding:2rem;color:var(--t1);font-family:var(--font-sans);line-height:1.7;">
+        <h2 style="margin-bottom:0.5rem;">All Hytale Spawn Entity IDs — Complete Reference (413 Entities)</h2>
+        <p style="margin-bottom:1.5rem;">HySpawns is a searchable catalog of all Hytale spawnable entity IDs. Use <code>/npc spawn EntityId</code> to spawn entities in-game. Enable JavaScript for the full interactive experience with search, filter, and copy features.</p>
+        <h3 style="margin:1rem 0 0.3rem;">Creature Entities (84)</h3>
+        <p style="word-break:break-all;">Antelope, Armadillo, Bear_Grizzly, Bear_Polar, Bison, Bison_Calf, Boar, Boar_Piglet, Bunny, Cactee, Camel, Camel_Calf, Chicken, Chicken_Chick, Chicken_Desert, Chicken_Desert_Chick, Cow, Cow_Calf, Crocodile, Deer_Doe, Deer_Stag, Emberwulf, Fen_Stalker, Fox, Frog_Blue, Frog_Green, Frog_Orange, Gecko, Goat, Goat_Kid, Hatworm, Horse, Horse_Foal, Hyena, Larva_Silk, Leopard_Snow, Lizard_Sand, Meerkat, Molerat, Moose_Bull, Moose_Cow, Mosshorn, Mosshorn_Plain, Mouflon, Mouflon_Lamb, Mouse, Pig, Pig_Piglet, Pig_Wild, Pig_Wild_Piglet, Rabbit, Ram, Ram_Lamb, Raptor_Cave, Rat, Rex_Cave, Scorpion, Sheep, Sheep_Lamb, Skrill, Skrill_Chick, Slug_Magma, Snail_Frost, Snail_Magma, Snake_Cobra, Snake_Marsh, Snake_Rattle, Snapdragon, Spark_Living, Spider, Spider_Cave, Squirrel, Tiger_Sabertooth, Toad_Rhino, Toad_Rhino_Magma, Tortoise, Trillodon, Turkey, Turkey_Chick, Warthog, Warthog_Piglet, Wolf_Black, Wolf_White, Yeti</p>
+        <h3 style="margin:1rem 0 0.3rem;">Intelligent Entities (121)</h3>
+        <p style="word-break:break-all;">Bramblekin, Bramblekin_Shaman, Dungeon_Scarak_Broodmother, Dungeon_Scarak_Broodmother_Young, Dungeon_Scarak_Defender, Dungeon_Scarak_Defender_Patrol, Dungeon_Scarak_Fighter, Dungeon_Scarak_Fighter_Patrol, Dungeon_Scarak_Louse, Dungeon_Scarak_Seeker, Dungeon_Scarak_Seeker_Patrol, Feran_Burrower, Feran_Civilian, Feran_Cub, Feran_Longtooth, Feran_Sharptooth, Feran_Windwalker, Goblin_Duke, Goblin_Duke_Phase_2, Goblin_Duke_Phase_3_Fast, Goblin_Duke_Phase_3_Slow, Goblin_Hermit, Goblin_Lobber, Goblin_Lobber_Patrol, Goblin_Miner, Goblin_Miner_Patrol, Goblin_Ogre, Goblin_Ogre_Tutorial, Goblin_Scavenger, Goblin_Scavenger_Battleaxe, Goblin_Scavenger_Sword, Goblin_Scrapper, Goblin_Scrapper_Patrol, Goblin_Thief, Goblin_Thief_Patrol, Hedera, Klops_Gentleman, Klops_Merchant, Klops_Merchant_Patrol, Klops_Merchant_Wandering, Klops_Miner, Klops_Miner_Patrol, Kweebec_Elder, Kweebec_Merchant, Kweebec_Prisoner, Kweebec_Razorleaf, Kweebec_Razorleaf_Patrol, Kweebec_Rootling, Kweebec_Sapling, Kweebec_Sapling_Orange, Kweebec_Sapling_Pink, Kweebec_Seedling, Kweebec_Sproutling, Kweebec_Sproutling_Patrol, Outlander_Berserker, Outlander_Brute, Outlander_Cultist, Outlander_Hunter, Outlander_Marauder, Outlander_Peon, Outlander_Priest, Outlander_Sorcerer, Outlander_Stalker, Quest_Master, Scarak_Broodmother, Scarak_Defender, Scarak_Defender_Patrol, Scarak_Fighter, Scarak_Fighter_Patrol, Scarak_Fighter_Royal_Guard, Scarak_Louse, Scarak_Seeker, Scarak_Seeker_Patrol, Slothian, Temple_Bluebird, Temple_Bunny, Temple_Deer_Doe, Temple_Deer_Stag, Temple_Duck, Temple_Feran, Temple_Feran_Longtooth, Temple_Finch_Green, Temple_Frog_Blue, Temple_Frog_Green, Temple_Frog_Orange, Temple_Klops, Temple_Klops_Merchant, Temple_Kweebec, Temple_Kweebec_Elder, Temple_Kweebec_Merchant, Temple_Kweebec_Razorleaf, Temple_Kweebec_Razorleaf_Patrol, Temple_Kweebec_Razorleaf_Patrol1, Temple_Kweebec_Razorleaf_Patrol2, Temple_Kweebec_Razorleaf_Patrol3, Temple_Kweebec_Razorleaf_Patrol4, Temple_Kweebec_Razorleaf_Patrol5, Temple_Kweebec_Rootling_Static, Temple_Kweebec_Seedling, Temple_Kweebec_Seedling_Static, Temple_Kweebec_Static, Temple_Mithril_Guard, Temple_Owl_Brown, Temple_Squirrel, Trork_Brawler, Trork_Chieftain, Trork_Doctor_Witch, Trork_Guard, Trork_Hunter, Trork_Mauler, Trork_Sentry, Trork_Sentry_Patrol, Trork_Shaman, Trork_Unarmed, Trork_Warrior, Trork_Warrior_Patrol, Tuluk_Fisherman, Wolf_Outlander_Priest, Wolf_Outlander_Sorcerer, Wolf_Trork_Hunter, Wolf_Trork_Shaman</p>
+        <h3 style="margin:1rem 0 0.3rem;">Undead Entities (140)</h3>
+        <p style="word-break:break-all;">Chicken_Undead, Cow_Undead, Dungeon_Skeleton_Sand_Archer, Dungeon_Skeleton_Sand_Assassin, Dungeon_Skeleton_Sand_Mage, Dungeon_Skeleton_Sand_Soldier, Ghoul, Horse_Skeleton, Horse_Skeleton_Armored, Hound_Bleached, Pig_Undead, Risen_Gunner, Risen_Knight, Shadow_Knight, Skeleton, Skeleton_Archer, Skeleton_Archer_Patrol, Skeleton_Archer_Wander, Skeleton_Archmage, Skeleton_Archmage_Patrol, Skeleton_Archmage_Wander, Skeleton_Burnt_Alchemist, Skeleton_Burnt_Alchemist_Patrol, Skeleton_Burnt_Alchemist_Wander, Skeleton_Burnt_Archer, Skeleton_Burnt_Archer_Patrol, Skeleton_Burnt_Archer_Wander, Skeleton_Burnt_Gunner, Skeleton_Burnt_Gunner_Patrol, Skeleton_Burnt_Gunner_Wander, Skeleton_Burnt_Knight, Skeleton_Burnt_Knight_Patrol, Skeleton_Burnt_Knight_Wander, Skeleton_Burnt_Lancer, Skeleton_Burnt_Lancer_Patrol, Skeleton_Burnt_Lancer_Wander, Skeleton_Burnt_Praetorian, Skeleton_Burnt_Praetorian_Patrol, Skeleton_Burnt_Praetorian_Wander, Skeleton_Burnt_Soldier, Skeleton_Burnt_Soldier_Patrol, Skeleton_Burnt_Soldier_Wander, Skeleton_Burnt_Wizard, Skeleton_Burnt_Wizard_Patrol, Skeleton_Burnt_Wizard_Wander, Skeleton_Fighter, Skeleton_Fighter_Patrol, Skeleton_Fighter_Wander, Skeleton_Frost_Archer, Skeleton_Frost_Archer_Patrol, Skeleton_Frost_Archer_Wander, Skeleton_Frost_Archmage, Skeleton_Frost_Archmage_Patrol, Skeleton_Frost_Archmage_Wander, Skeleton_Frost_Fighter, Skeleton_Frost_Fighter_Patrol, Skeleton_Frost_Fighter_Wander, Skeleton_Frost_Knight, Skeleton_Frost_Knight_Patrol, Skeleton_Frost_Knight_Wander, Skeleton_Frost_Mage, Skeleton_Frost_Mage_Patrol, Skeleton_Frost_Mage_Wander, Skeleton_Frost_Ranger, Skeleton_Frost_Ranger_Patrol, Skeleton_Frost_Ranger_Wander, Skeleton_Frost_Scout, Skeleton_Frost_Scout_Patrol, Skeleton_Frost_Scout_Wander, Skeleton_Frost_Soldier, Skeleton_Frost_Soldier_Patrol, Skeleton_Frost_Soldier_Wander, Skeleton_Incandescent_Fighter, Skeleton_Incandescent_Fighter_Patrol, Skeleton_Incandescent_Fighter_Wander, Skeleton_Incandescent_Footman, Skeleton_Incandescent_Footman_Patrol, Skeleton_Incandescent_Footman_Wander, Skeleton_Incandescent_Head, Skeleton_Incandescent_Mage, Skeleton_Incandescent_Mage_Patrol, Skeleton_Incandescent_Mage_Wander, Skeleton_Knight, Skeleton_Knight_Patrol, Skeleton_Knight_Wander, Skeleton_Mage, Skeleton_Mage_Patrol, Skeleton_Mage_Wander, Skeleton_Pirate_Captain, Skeleton_Pirate_Captain_Patrol, Skeleton_Pirate_Captain_Wander, Skeleton_Pirate_Gunner, Skeleton_Pirate_Gunner_Patrol, Skeleton_Pirate_Gunner_Wander, Skeleton_Pirate_Striker, Skeleton_Pirate_Striker_Patrol, Skeleton_Pirate_Striker_Wander, Skeleton_Ranger, Skeleton_Ranger_Patrol, Skeleton_Ranger_Wander, Skeleton_Sand_Archer, Skeleton_Sand_Archer_Patrol, Skeleton_Sand_Archer_Wander, Skeleton_Sand_Archmage, Skeleton_Sand_Archmage_Patrol, Skeleton_Sand_Archmage_Wander, Skeleton_Sand_Assassin, Skeleton_Sand_Assassin_Patrol, Skeleton_Sand_Assassin_Wander, Skeleton_Sand_Guard, Skeleton_Sand_Guard_Patrol, Skeleton_Sand_Guard_Wander, Skeleton_Sand_Mage, Skeleton_Sand_Mage_Patrol, Skeleton_Sand_Mage_Wander, Skeleton_Sand_Ranger, Skeleton_Sand_Ranger_Patrol, Skeleton_Sand_Ranger_Wander, Skeleton_Sand_Scout, Skeleton_Sand_Scout_Patrol, Skeleton_Sand_Scout_Wander, Skeleton_Sand_Soldier, Skeleton_Sand_Soldier_Patrol, Skeleton_Sand_Soldier_Wander, Skeleton_Scout, Skeleton_Scout_Patrol, Skeleton_Scout_Wander, Skeleton_Soldier, Skeleton_Soldier_Patrol, Skeleton_Soldier_Wander, Werewolf, Wraith, Wraith_Lantern, Zombie, Zombie_Aberrant, Zombie_Aberrant_Big, Zombie_Aberrant_Small, Zombie_Burnt, Zombie_Frost, Zombie_Sand</p>
+        <h3 style="margin:1rem 0 0.3rem;">Aquatic Entities (30)</h3>
+        <p style="word-break:break-all;">Bluegill, Catfish, Clownfish, Crab, Eel_Moray, Frostgill, Jellyfish_Blue, Jellyfish_Cyan, Jellyfish_Green, Jellyfish_Man_Of_War, Jellyfish_Red, Jellyfish_Yellow, Lobster, Minnow, Pike, Piranha, Piranha_Black, Pufferfish, Salmon, Shark_Hammerhead, Shellfish_Lava, Snapjaw, Tang_Blue, Tang_Chevron, Tang_Lemon_Peel, Tang_Sailfin, Trilobite, Trilobite_Black, Trout_Rainbow, Whale_Humpback</p>
+        <h3 style="margin:1rem 0 0.3rem;">Avian Entities (20)</h3>
+        <p style="word-break:break-all;">Archaeopteryx, Bat, Bat_Ice, Bluebird, Crow, Duck, Finch_Green, Flamingo, Hawk, Owl_Brown, Owl_Snow, Parrot, Penguin, Pigeon, Pterodactyl, Raven, Sparrow, Tetrabird, Vulture, Woodpecker</p>
+        <h3 style="margin:1rem 0 0.3rem;">Elemental Entities (11)</h3>
+        <p style="word-break:break-all;">Golem_Crystal_Earth, Golem_Crystal_Flame, Golem_Crystal_Frost, Golem_Crystal_Sand, Golem_Crystal_Thunder, Golem_Firesteel, Golem_Guardian_Void, Spirit_Ember, Spirit_Frost, Spirit_Root, Spirit_Thunder</p>
+        <h3 style="margin:1rem 0 0.3rem;">Boss Entities (2)</h3>
+        <p style="word-break:break-all;">Dragon_Fire, Dragon_Frost</p>
+        <h3 style="margin:1rem 0 0.3rem;">Void Entities (5)</h3>
+        <p style="word-break:break-all;">Crawler_Void, Eye_Void, Larva_Void, Spawn_Void, Spectre_Void</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <h3>How do I spawn entities in Hytale?</h3>
+        <p>Use the built-in server command: /npc spawn EntityId to spawn an entity at your location.</p>
+        <h3>How many spawnable entities does Hytale have?</h3>
+        <p>Hytale has 413 unique spawnable entity IDs across 8 categories.</p>
+        <h3>What is the format of Hytale entity IDs?</h3>
+        <p>Entity IDs use underscores to separate words. For example: Bear_Grizzly, Skeleton_Frost_Knight, Dragon_Fire.</p>
+      </div>
+      </noscript>
+
+      <!-- Empty state (hidden by default) -->
+      <div class="empty-state" id="empty-state">
+        <div class="empty-state-icon">&#128298;</div>
+        <div class="empty-state-title">No matches found</div>
+        <div class="empty-state-text">
+          Try searching for creature names (skeleton, wolf), categories (undead, boss), or zones (zone 1).
+        </div>
+        <div class="empty-state-suggestions">
+          <button class="suggestion-pill">skeleton</button>
+          <button class="suggestion-pill">dragon</button>
+          <button class="suggestion-pill">golem</button>
+          <button class="suggestion-pill">goblin</button>
+          <button class="suggestion-pill">wolf</button>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer" id="footer">
+        HySpawns &mdash; Unofficial community tool, not affiliated with Hypixel Studios<br>
+        Built by <a href="https://www.curseforge.com/hytale/mods/scruby-companion" target="_blank" rel="noopener">Scruby Companion</a> &middot; <a href="https://github.com/superdynamix-dev/hyspawns-website" target="_blank" rel="noopener">GitHub</a>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+
+<script>
+// ===== DATA LAYER =====
+const ENTITIES=[
+  {id:"Antelope",c:"Creature",b:"passive",sc:"Mammal",hp:81},
+  {id:"Archaeopteryx",c:"Avian",b:"passive",sc:"Raptor",hp:61},
+  {id:"Armadillo",c:"Creature",b:"passive",sc:"Mammal",hp:103},
+  {id:"Bat",c:"Avian",b:"passive",sc:"Aerial",hp:15,z:["Zone 1","Zone 2","Zone 4","World"]},
+  {id:"Bat_Ice",c:"Avian",b:"passive",sc:"Aerial",hp:25,z:["Zone 3"]},
+  {id:"Bear_Grizzly",c:"Creature",b:"hostile",sc:"Mammal",hp:124,z:["World"]},
+  {id:"Bear_Polar",c:"Creature",b:"passive",sc:"Mammal",hp:103},
+  {id:"Bison",c:"Creature",b:"passive",sc:"Livestock",hp:126,t:1},
+  {id:"Bison_Calf",c:"Creature",b:"passive",sc:"Livestock",hp:94,t:1},
+  {id:"Bluebird",c:"Avian",b:"passive",sc:"Aerial",hp:15},
+  {id:"Bluegill",c:"Aquatic",b:"passive",sc:"Freshwater",hp:29,z:["World"]},
+  {id:"Boar",c:"Creature",b:"passive",sc:"Livestock",hp:81,t:1},
+  {id:"Boar_Piglet",c:"Creature",b:"passive",sc:"Livestock",hp:29,t:1},
+  {id:"Bramblekin",c:"Intelligent",b:"neutral"},
+  {id:"Bramblekin_Shaman",c:"Intelligent",b:"neutral"},
+  {id:"Bunny",c:"Creature",b:"passive",sc:"Livestock",hp:25,t:1},
+  {id:"Cactee",c:"Creature",b:"passive",sc:"Mythic",hp:61},
+  {id:"Camel",c:"Creature",b:"passive",sc:"Livestock",hp:126,t:1},
+  {id:"Camel_Calf",c:"Creature",b:"passive",sc:"Livestock",hp:94,t:1},
+  {id:"Catfish",c:"Aquatic",b:"passive",sc:"Freshwater",hp:29,z:["World"]},
+  {id:"Chicken",c:"Creature",b:"passive",sc:"Livestock",hp:29,t:1},
+  {id:"Chicken_Chick",c:"Creature",b:"passive",sc:"Livestock",hp:7,t:1},
+  {id:"Chicken_Desert",c:"Creature",b:"passive",sc:"Livestock",hp:38,t:1},
+  {id:"Chicken_Desert_Chick",c:"Creature",b:"passive",sc:"Livestock",hp:8,t:1},
+  {id:"Chicken_Undead",c:"Undead",b:"hostile",hp:61},
+  {id:"Clownfish",c:"Aquatic",b:"passive",sc:"Marine",hp:20,z:["World"]},
+  {id:"Cow",c:"Creature",b:"passive",sc:"Livestock",hp:103,t:1},
+  {id:"Cow_Calf",c:"Creature",b:"passive",sc:"Livestock",hp:60,t:1},
+  {id:"Cow_Undead",c:"Undead",b:"hostile",hp:124},
+  {id:"Crab",c:"Aquatic",b:"passive",sc:"Marine",hp:49},
+  {id:"Crawler_Void",c:"Void",b:"hostile",hp:74,z:["Portal","World"]},
+  {id:"Crocodile",c:"Creature",b:"hostile",sc:"Reptile",hp:145,z:["World"]},
+  {id:"Crow",c:"Avian",b:"passive",sc:"Aerial",hp:20},
+  {id:"Deer_Doe",c:"Creature",b:"passive",sc:"Mammal",hp:81},
+  {id:"Deer_Stag",c:"Creature",b:"passive",sc:"Mammal",hp:103},
+  {id:"Dragon_Fire",c:"Boss",b:"boss",hp:400,z:["World"]},
+  {id:"Dragon_Frost",c:"Boss",b:"boss",hp:400,z:["World"]},
+  {id:"Duck",c:"Avian",b:"passive",sc:"Fowl",hp:25},
+  {id:"Dungeon_Scarak_Broodmother",c:"Intelligent",b:"hostile",sc:"Dungeon",hp:145,z:["World"]},
+  {id:"Dungeon_Scarak_Broodmother_Young",c:"Intelligent",b:"hostile",sc:"Dungeon",hp:124,z:["World"]},
+  {id:"Dungeon_Scarak_Defender",c:"Intelligent",b:"hostile",sc:"Dungeon",hp:103,z:["World"]},
+  {id:"Dungeon_Scarak_Defender_Patrol",c:"Intelligent",b:"hostile",sc:"Dungeon",hp:158,z:["World"]},
+  {id:"Dungeon_Scarak_Fighter",c:"Intelligent",b:"hostile",sc:"Dungeon",hp:81,z:["World"]},
+  {id:"Dungeon_Scarak_Fighter_Patrol",c:"Intelligent",b:"hostile",sc:"Dungeon",z:["World"]},
+  {id:"Dungeon_Scarak_Louse",c:"Intelligent",b:"hostile",sc:"Dungeon",hp:21,z:["World"]},
+  {id:"Dungeon_Scarak_Seeker",c:"Intelligent",b:"hostile",sc:"Dungeon",hp:61,z:["World"]},
+  {id:"Dungeon_Scarak_Seeker_Patrol",c:"Intelligent",b:"hostile",sc:"Dungeon",hp:63,z:["World"]},
+  {id:"Dungeon_Skeleton_Sand_Archer",c:"Undead",b:"hostile",sc:"Dungeon",hp:61,z:["World"],w:["Weapon_Shortbow_Bronze"]},
+  {id:"Dungeon_Skeleton_Sand_Assassin",c:"Undead",b:"hostile",sc:"Dungeon",hp:61,z:["World"],w:["Weapon_Club_Iron_Rusty"]},
+  {id:"Dungeon_Skeleton_Sand_Mage",c:"Undead",b:"hostile",sc:"Dungeon",hp:49,z:["World"],w:["Weapon_Spellbook_Grimoire_Purple"]},
+  {id:"Dungeon_Skeleton_Sand_Soldier",c:"Undead",b:"hostile",sc:"Dungeon",hp:61,z:["World"],w:["Weapon_Club_Iron_Rusty"]},
+  {id:"Eel_Moray",c:"Aquatic",b:"passive",sc:"Abyssal",hp:74,z:["Zone 3","World"]},
+  {id:"Emberwulf",c:"Creature",b:"hostile",sc:"Mythic",hp:193},
+  {id:"Eye_Void",c:"Void",b:"hostile",hp:61,z:["Portal"]},
+  {id:"Fen_Stalker",c:"Creature",b:"passive",sc:"Mythic",hp:74},
+  {id:"Feran_Burrower",c:"Intelligent",b:"neutral",sc:"Feran",hp:61,z:["World"]},
+  {id:"Feran_Civilian",c:"Intelligent",b:"neutral",sc:"Feran",hp:49,z:["World"]},
+  {id:"Feran_Cub",c:"Intelligent",b:"neutral",sc:"Feran",hp:29,z:["World"]},
+  {id:"Feran_Longtooth",c:"Intelligent",b:"neutral",sc:"Feran",hp:61,z:["World"],w:["Weapon_Spear_Bone","Weapon_Spear_Bone"]},
+  {id:"Feran_Sharptooth",c:"Intelligent",b:"neutral",sc:"Feran",hp:61,z:["World"],w:["Weapon_Sword_Bone","Weapon_Axe_Bone"]},
+  {id:"Feran_Windwalker",c:"Intelligent",b:"neutral",sc:"Feran",hp:61,z:["World"]},
+  {id:"Finch_Green",c:"Avian",b:"passive",sc:"Aerial",hp:15},
+  {id:"Flamingo",c:"Avian",b:"passive",sc:"Aerial",hp:49},
+  {id:"Fox",c:"Creature",b:"passive",sc:"Mammal",hp:38,z:["Zone 1","World"]},
+  {id:"Frog_Blue",c:"Creature",b:"passive",sc:"Critter",hp:15},
+  {id:"Frog_Green",c:"Creature",b:"passive",sc:"Critter",hp:15},
+  {id:"Frog_Orange",c:"Creature",b:"passive",sc:"Critter",hp:15},
+  {id:"Frostgill",c:"Aquatic",b:"passive",sc:"Freshwater",hp:81,z:["Zone 3"]},
+  {id:"Gecko",c:"Creature",b:"passive",sc:"Critter",hp:25},
+  {id:"Ghoul",c:"Undead",b:"hostile",hp:193},
+  {id:"Goat",c:"Creature",b:"passive",sc:"Livestock",hp:81,t:1},
+  {id:"Goat_Kid",c:"Creature",b:"passive",sc:"Livestock",hp:36,t:1},
+  {id:"Goblin_Duke",c:"Intelligent",b:"hostile",sc:"Goblin",hp:226,z:["World"]},
+  {id:"Goblin_Duke_Phase_2",c:"Intelligent",b:"hostile",sc:"Goblin",hp:320},
+  {id:"Goblin_Duke_Phase_3_Fast",c:"Intelligent",b:"hostile",sc:"Goblin",hp:200},
+  {id:"Goblin_Duke_Phase_3_Slow",c:"Intelligent",b:"hostile",sc:"Goblin",hp:200},
+  {id:"Goblin_Hermit",c:"Intelligent",b:"hostile",sc:"Goblin",hp:38,z:["Zone 1","Zone 2"]},
+  {id:"Goblin_Lobber",c:"Intelligent",b:"hostile",sc:"Goblin",hp:48,z:["Zone 1","Zone 2","World"]},
+  {id:"Goblin_Lobber_Patrol",c:"Intelligent",b:"hostile",sc:"Goblin",hp:48,z:["World"]},
+  {id:"Goblin_Miner",c:"Intelligent",b:"hostile",sc:"Goblin",hp:38,z:["Zone 1","Zone 2","World"]},
+  {id:"Goblin_Miner_Patrol",c:"Intelligent",b:"hostile",sc:"Goblin",hp:38,z:["World"]},
+  {id:"Goblin_Ogre",c:"Intelligent",b:"hostile",sc:"Goblin",hp:124,z:["World"]},
+  {id:"Goblin_Ogre_Tutorial",c:"Intelligent",b:"hostile",sc:"Goblin",hp:124},
+  {id:"Goblin_Scavenger",c:"Intelligent",b:"hostile",sc:"Goblin",hp:54,z:["World"]},
+  {id:"Goblin_Scavenger_Battleaxe",c:"Intelligent",b:"hostile",sc:"Goblin",hp:54},
+  {id:"Goblin_Scavenger_Sword",c:"Intelligent",b:"hostile",sc:"Goblin",hp:54},
+  {id:"Goblin_Scrapper",c:"Intelligent",b:"hostile",sc:"Goblin",hp:38,z:["Zone 1","Zone 2","Zone 3","World"]},
+  {id:"Goblin_Scrapper_Patrol",c:"Intelligent",b:"hostile",sc:"Goblin",hp:38,z:["World"]},
+  {id:"Goblin_Thief",c:"Intelligent",b:"hostile",sc:"Goblin",hp:38,z:["World"]},
+  {id:"Goblin_Thief_Patrol",c:"Intelligent",b:"hostile",sc:"Goblin",hp:38,z:["World"]},
+  {id:"Golem_Crystal_Earth",c:"Elemental",b:"hostile",sc:"Golem",hp:160,z:["World"]},
+  {id:"Golem_Crystal_Flame",c:"Elemental",b:"hostile",sc:"Golem",hp:283,z:["World"]},
+  {id:"Golem_Crystal_Frost",c:"Elemental",b:"hostile",sc:"Golem",hp:224,z:["World"]},
+  {id:"Golem_Crystal_Sand",c:"Elemental",b:"hostile",sc:"Golem",hp:193,z:["World"]},
+  {id:"Golem_Crystal_Thunder",c:"Elemental",b:"hostile",sc:"Golem",hp:193},
+  {id:"Golem_Firesteel",c:"Elemental",b:"hostile",sc:"Golem",hp:224,z:["Zone 1","Zone 2","Zone 4","World"]},
+  {id:"Golem_Guardian_Void",c:"Elemental",b:"hostile",sc:"Golem"},
+  {id:"Hatworm",c:"Creature",b:"passive",sc:"Mythic",hp:20},
+  {id:"Hawk",c:"Avian",b:"passive",sc:"Raptor",hp:38},
+  {id:"Hedera",c:"Intelligent",b:"hostile",hp:226,z:["World"]},
+  {id:"Horse",c:"Creature",b:"passive",sc:"Livestock",hp:124,t:1},
+  {id:"Horse_Foal",c:"Creature",b:"passive",sc:"Livestock",hp:49,t:1},
+  {id:"Horse_Skeleton",c:"Undead",b:"hostile",hp:160},
+  {id:"Horse_Skeleton_Armored",c:"Undead",b:"hostile",hp:90},
+  {id:"Hound_Bleached",c:"Undead",b:"hostile",hp:126,z:["Zone 4"]},
+  {id:"Hyena",c:"Creature",b:"passive",sc:"Mammal",hp:103,z:["World"]},
+  {id:"Jellyfish_Blue",c:"Aquatic",b:"passive",sc:"Marine",hp:38},
+  {id:"Jellyfish_Cyan",c:"Aquatic",b:"passive",sc:"Marine",hp:38},
+  {id:"Jellyfish_Green",c:"Aquatic",b:"passive",sc:"Marine",hp:38},
+  {id:"Jellyfish_Man_Of_War",c:"Aquatic",b:"passive",sc:"Marine",hp:74},
+  {id:"Jellyfish_Red",c:"Aquatic",b:"passive",sc:"Marine",hp:38},
+  {id:"Jellyfish_Yellow",c:"Aquatic",b:"passive",sc:"Marine",hp:38},
+  {id:"Klops_Gentleman",c:"Intelligent",b:"passive",hp:74,z:["World"]},
+  {id:"Klops_Merchant",c:"Intelligent",b:"passive"},
+  {id:"Klops_Merchant_Patrol",c:"Intelligent",b:"passive"},
+  {id:"Klops_Merchant_Wandering",c:"Intelligent",b:"passive"},
+  {id:"Klops_Miner",c:"Intelligent",b:"passive",hp:74,z:["World"]},
+  {id:"Klops_Miner_Patrol",c:"Intelligent",b:"passive",z:["World"]},
+  {id:"Kweebec_Elder",c:"Intelligent",b:"neutral",sc:"Kweebec",hp:38},
+  {id:"Kweebec_Merchant",c:"Intelligent",b:"neutral",sc:"Kweebec",z:["World"]},
+  {id:"Kweebec_Prisoner",c:"Intelligent",b:"neutral",sc:"Kweebec"},
+  {id:"Kweebec_Razorleaf",c:"Intelligent",b:"neutral",sc:"Kweebec",hp:105,z:["World"]},
+  {id:"Kweebec_Razorleaf_Patrol",c:"Intelligent",b:"neutral",sc:"Kweebec",hp:105,z:["World"]},
+  {id:"Kweebec_Rootling",c:"Intelligent",b:"neutral",sc:"Kweebec",hp:62},
+  {id:"Kweebec_Sapling",c:"Intelligent",b:"neutral",sc:"Kweebec",hp:74,z:["World"]},
+  {id:"Kweebec_Sapling_Orange",c:"Intelligent",b:"neutral",sc:"Kweebec",hp:38,z:["World"]},
+  {id:"Kweebec_Sapling_Pink",c:"Intelligent",b:"neutral",sc:"Kweebec",hp:38,z:["World"]},
+  {id:"Kweebec_Seedling",c:"Intelligent",b:"neutral",sc:"Kweebec",hp:20},
+  {id:"Kweebec_Sproutling",c:"Intelligent",b:"neutral",sc:"Kweebec",hp:29,z:["World"]},
+  {id:"Kweebec_Sproutling_Patrol",c:"Intelligent",b:"neutral",sc:"Kweebec",hp:29,z:["World"]},
+  {id:"Larva_Silk",c:"Creature",b:"passive",sc:"Vermin",hp:25,z:["Zone 1"]},
+  {id:"Larva_Void",c:"Void",b:"hostile",hp:36,z:["Portal"]},
+  {id:"Leopard_Snow",c:"Creature",b:"hostile",sc:"Mammal",hp:103},
+  {id:"Lizard_Sand",c:"Creature",b:"passive",sc:"Reptile",hp:103,z:["Zone 2","World"]},
+  {id:"Lobster",c:"Aquatic",b:"passive",sc:"Marine",hp:61},
+  {id:"Meerkat",c:"Creature",b:"passive",sc:"Critter",hp:29},
+  {id:"Minnow",c:"Aquatic",b:"passive",sc:"Freshwater",hp:15,z:["World"]},
+  {id:"Molerat",c:"Creature",b:"passive",sc:"Vermin",hp:61,z:["Zone 1"]},
+  {id:"Moose_Bull",c:"Creature",b:"passive",sc:"Mammal",hp:124},
+  {id:"Moose_Cow",c:"Creature",b:"passive",sc:"Mammal",hp:103},
+  {id:"Mosshorn",c:"Creature",b:"passive",sc:"Mammal",hp:124,t:1},
+  {id:"Mosshorn_Plain",c:"Creature",b:"passive",sc:"Mammal",hp:124,t:1},
+  {id:"Mouflon",c:"Creature",b:"passive",sc:"Livestock",hp:81,t:1},
+  {id:"Mouflon_Lamb",c:"Creature",b:"passive",sc:"Livestock",hp:49,t:1},
+  {id:"Mouse",c:"Creature",b:"passive",sc:"Critter",hp:15},
+  {id:"Outlander_Berserker",c:"Intelligent",b:"hostile",sc:"Outlander",hp:103,z:["World"],w:["Weapon_Axe_Doomed","Weapon_Axe_Doomed"]},
+  {id:"Outlander_Brute",c:"Intelligent",b:"hostile",sc:"Outlander",hp:124,z:["World"],w:["Weapon_Battleaxe_Doomed"]},
+  {id:"Outlander_Cultist",c:"Intelligent",b:"hostile",sc:"Outlander",hp:81,z:["World"],w:["Weapon_Daggers_Doomed","Weapon_Daggers_Doomed"]},
+  {id:"Outlander_Hunter",c:"Intelligent",b:"hostile",sc:"Outlander",hp:61,z:["World"],w:["Weapon_Shortbow_Doomed","Weapon_Daggers_Fang_Doomed"]},
+  {id:"Outlander_Marauder",c:"Intelligent",b:"hostile",sc:"Outlander",hp:103,z:["World"],w:["Weapon_Sword_Doomed","Weapon_Sword_Doomed"]},
+  {id:"Outlander_Peon",c:"Intelligent",b:"hostile",sc:"Outlander",hp:81,z:["World"],w:["Tool_Pickaxe_Cobalt"]},
+  {id:"Outlander_Priest",c:"Intelligent",b:"hostile",sc:"Outlander",hp:103,z:["World"],w:["Weapon_Club_Doomed","Weapon_Club_Doomed"]},
+  {id:"Outlander_Sorcerer",c:"Intelligent",b:"hostile",sc:"Outlander",hp:103,z:["World"],w:["Weapon_Staff_Doomed","Weapon_Staff_Doomed"]},
+  {id:"Outlander_Stalker",c:"Intelligent",b:"hostile",sc:"Outlander",hp:61,z:["World"],w:["Weapon_Crossbow_Iron","Weapon_Daggers_Doomed"]},
+  {id:"Owl_Brown",c:"Avian",b:"passive",sc:"Aerial",hp:29},
+  {id:"Owl_Snow",c:"Avian",b:"passive",sc:"Aerial",hp:29},
+  {id:"Parrot",c:"Avian",b:"passive",sc:"Aerial",hp:29,z:["World"]},
+  {id:"Penguin",c:"Avian",b:"passive",sc:"Aerial",hp:38},
+  {id:"Pig",c:"Creature",b:"passive",sc:"Livestock",hp:38,t:1},
+  {id:"Pig_Piglet",c:"Creature",b:"passive",sc:"Livestock",hp:25,t:1},
+  {id:"Pig_Undead",c:"Undead",b:"hostile",hp:103},
+  {id:"Pig_Wild",c:"Creature",b:"passive",sc:"Livestock",hp:74,t:1},
+  {id:"Pig_Wild_Piglet",c:"Creature",b:"passive",sc:"Livestock",hp:30,t:1},
+  {id:"Pigeon",c:"Avian",b:"passive",sc:"Fowl",hp:20},
+  {id:"Pike",c:"Aquatic",b:"passive",sc:"Freshwater",hp:38},
+  {id:"Piranha",c:"Aquatic",b:"passive",sc:"Freshwater",hp:38},
+  {id:"Piranha_Black",c:"Aquatic",b:"passive",sc:"Freshwater",hp:45,z:["Zone 3","World"]},
+  {id:"Pterodactyl",c:"Avian",b:"passive",sc:"Raptor",hp:60,z:["World"]},
+  {id:"Pufferfish",c:"Aquatic",b:"passive",sc:"Marine",hp:38},
+  {id:"Quest_Master",c:"Intelligent",b:"passive"},
+  {id:"Rabbit",c:"Creature",b:"passive",sc:"Livestock",hp:49,t:1,z:["World"]},
+  {id:"Ram",c:"Creature",b:"passive",sc:"Livestock",hp:124,t:1},
+  {id:"Ram_Lamb",c:"Creature",b:"passive",sc:"Livestock",hp:81,t:1},
+  {id:"Raptor_Cave",c:"Creature",b:"hostile",sc:"Reptile",hp:103,z:["World"]},
+  {id:"Rat",c:"Creature",b:"passive",sc:"Vermin",hp:21,z:["Zone 1","Zone 2","Zone 3","Zone 4","World"]},
+  {id:"Raven",c:"Avian",b:"passive",sc:"Aerial",hp:49,z:["World"]},
+  {id:"Rex_Cave",c:"Creature",b:"hostile",sc:"Reptile",hp:400,z:["World"]},
+  {id:"Risen_Gunner",c:"Undead",b:"hostile",sc:"Skeleton",hp:81,w:["Weapon_Gun_Blunderbuss_Rusty"]},
+  {id:"Risen_Knight",c:"Undead",b:"hostile",sc:"Skeleton",hp:74,w:["Weapon_Sword_Steel_Rusty"]},
+  {id:"Salmon",c:"Aquatic",b:"passive",sc:"Freshwater",hp:38},
+  {id:"Scarak_Broodmother",c:"Intelligent",b:"hostile",sc:"Scarak",hp:145,z:["World"]},
+  {id:"Scarak_Defender",c:"Intelligent",b:"hostile",sc:"Scarak",hp:103,z:["World"]},
+  {id:"Scarak_Defender_Patrol",c:"Intelligent",b:"hostile",sc:"Scarak",hp:103,z:["World"]},
+  {id:"Scarak_Fighter",c:"Intelligent",b:"hostile",sc:"Scarak",hp:81,z:["World"]},
+  {id:"Scarak_Fighter_Patrol",c:"Intelligent",b:"hostile",sc:"Scarak",z:["World"]},
+  {id:"Scarak_Fighter_Royal_Guard",c:"Intelligent",b:"hostile",sc:"Scarak",hp:81},
+  {id:"Scarak_Louse",c:"Intelligent",b:"hostile",sc:"Scarak",hp:21,z:["Zone 2"]},
+  {id:"Scarak_Seeker",c:"Intelligent",b:"hostile",sc:"Scarak",hp:61,z:["World"]},
+  {id:"Scarak_Seeker_Patrol",c:"Intelligent",b:"hostile",sc:"Scarak",hp:61,z:["World"]},
+  {id:"Scorpion",c:"Creature",b:"passive",sc:"Vermin",hp:124,z:["Zone 2","World"]},
+  {id:"Shadow_Knight",c:"Undead",b:"hostile",hp:400},
+  {id:"Shark_Hammerhead",c:"Aquatic",b:"passive",sc:"Abyssal",hp:145,z:["World"]},
+  {id:"Sheep",c:"Creature",b:"passive",sc:"Livestock",hp:81,t:1,z:["World"]},
+  {id:"Sheep_Lamb",c:"Creature",b:"passive",sc:"Livestock",hp:29,t:1},
+  {id:"Shellfish_Lava",c:"Aquatic",b:"passive",sc:"Abyssal",hp:29},
+  {id:"Skeleton",c:"Undead",b:"hostile",sc:"Skeleton",hp:92,z:["World"]},
+  {id:"Skeleton_Archer",c:"Undead",b:"hostile",sc:"Skeleton",hp:36,z:["World"],w:["Weapon_Shortbow_Iron_Rusty"]},
+  {id:"Skeleton_Archer_Patrol",c:"Undead",b:"hostile",sc:"Skeleton",z:["World"]},
+  {id:"Skeleton_Archer_Wander",c:"Undead",b:"hostile",sc:"Skeleton"},
+  {id:"Skeleton_Archmage",c:"Undead",b:"hostile",sc:"Skeleton",hp:88,z:["World"],w:["Weapon_Staff_Wood_Rotten"]},
+  {id:"Skeleton_Archmage_Patrol",c:"Undead",b:"hostile",sc:"Skeleton",z:["World"]},
+  {id:"Skeleton_Archmage_Wander",c:"Undead",b:"hostile",sc:"Skeleton"},
+  {id:"Skeleton_Burnt_Alchemist",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",hp:103,z:["Zone 4","World"],w:["Weapon_Bomb_Potion_Poison"]},
+  {id:"Skeleton_Burnt_Alchemist_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",z:["World"]},
+  {id:"Skeleton_Burnt_Alchemist_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Burnt"},
+  {id:"Skeleton_Burnt_Archer",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",hp:74,z:["World"],w:["Weapon_Shortbow_Iron_Rusty"]},
+  {id:"Skeleton_Burnt_Archer_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",z:["World"]},
+  {id:"Skeleton_Burnt_Archer_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Burnt"},
+  {id:"Skeleton_Burnt_Gunner",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",hp:81,z:["World"],w:["Weapon_Gun_Blunderbuss_Rusty"]},
+  {id:"Skeleton_Burnt_Gunner_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",z:["World"]},
+  {id:"Skeleton_Burnt_Gunner_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Burnt"},
+  {id:"Skeleton_Burnt_Knight",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",hp:103,z:["World"],w:["Weapon_Sword_Steel_Rusty"]},
+  {id:"Skeleton_Burnt_Knight_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",z:["World"]},
+  {id:"Skeleton_Burnt_Knight_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Burnt"},
+  {id:"Skeleton_Burnt_Lancer",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",hp:103,z:["World"],w:["Weapon_Battleaxe_Steel_Rusty"]},
+  {id:"Skeleton_Burnt_Lancer_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",z:["World"]},
+  {id:"Skeleton_Burnt_Lancer_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Burnt"},
+  {id:"Skeleton_Burnt_Praetorian",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",hp:226,z:["World"],w:["Weapon_Longsword_Praetorian_NPC"]},
+  {id:"Skeleton_Burnt_Praetorian_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",z:["World"]},
+  {id:"Skeleton_Burnt_Praetorian_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Burnt"},
+  {id:"Skeleton_Burnt_Soldier",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",hp:124,z:["Zone 4","World"],w:["Weapon_Sword_Steel_Rusty"]},
+  {id:"Skeleton_Burnt_Soldier_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",z:["World"]},
+  {id:"Skeleton_Burnt_Soldier_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Burnt"},
+  {id:"Skeleton_Burnt_Wizard",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",hp:81,z:["World"],w:["Weapon_Staff_Wizard"]},
+  {id:"Skeleton_Burnt_Wizard_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Burnt",z:["World"]},
+  {id:"Skeleton_Burnt_Wizard_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Burnt"},
+  {id:"Skeleton_Fighter",c:"Undead",b:"hostile",sc:"Skeleton",hp:36,z:["Zone 1","World"],w:["Droplist:Skeleton_Fighter_Random_Weapon"]},
+  {id:"Skeleton_Fighter_Patrol",c:"Undead",b:"hostile",sc:"Skeleton",z:["World"]},
+  {id:"Skeleton_Fighter_Wander",c:"Undead",b:"hostile",sc:"Skeleton"},
+  {id:"Skeleton_Frost_Archer",c:"Undead",b:"hostile",sc:"Skeleton_Frost",hp:61,z:["World"],w:["Weapon_Shortbow_Frost"]},
+  {id:"Skeleton_Frost_Archer_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Frost",z:["World"]},
+  {id:"Skeleton_Frost_Archer_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Frost"},
+  {id:"Skeleton_Frost_Archmage",c:"Undead",b:"hostile",sc:"Skeleton_Frost",hp:61,z:["World"],w:["Weapon_Staff_Frost"]},
+  {id:"Skeleton_Frost_Archmage_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Frost",z:["World"]},
+  {id:"Skeleton_Frost_Archmage_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Frost"},
+  {id:"Skeleton_Frost_Fighter",c:"Undead",b:"hostile",sc:"Skeleton_Frost",hp:74,z:["Zone 3","World"],w:["Weapon_Club_Iron_Rusty"]},
+  {id:"Skeleton_Frost_Fighter_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Frost",z:["World"]},
+  {id:"Skeleton_Frost_Fighter_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Frost"},
+  {id:"Skeleton_Frost_Knight",c:"Undead",b:"hostile",sc:"Skeleton_Frost",hp:74,z:["World"],w:["Weapon_Sword_Frost"]},
+  {id:"Skeleton_Frost_Knight_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Frost",z:["World"]},
+  {id:"Skeleton_Frost_Knight_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Frost"},
+  {id:"Skeleton_Frost_Mage",c:"Undead",b:"hostile",sc:"Skeleton_Frost",hp:61,z:["World"],w:["Weapon_Spellbook_Frost"]},
+  {id:"Skeleton_Frost_Mage_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Frost",z:["World"]},
+  {id:"Skeleton_Frost_Mage_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Frost"},
+  {id:"Skeleton_Frost_Ranger",c:"Undead",b:"hostile",sc:"Skeleton_Frost",hp:61,z:["Zone 3","World"],w:["Weapon_Crossbow_Ancient_Steel"]},
+  {id:"Skeleton_Frost_Ranger_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Frost",z:["World"]},
+  {id:"Skeleton_Frost_Ranger_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Frost"},
+  {id:"Skeleton_Frost_Scout",c:"Undead",b:"hostile",sc:"Skeleton_Frost",hp:49,z:["World"],w:["Weapon_Shortbow_Crude"]},
+  {id:"Skeleton_Frost_Scout_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Frost",z:["World"]},
+  {id:"Skeleton_Frost_Scout_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Frost"},
+  {id:"Skeleton_Frost_Soldier",c:"Undead",b:"hostile",sc:"Skeleton_Frost",hp:74,z:["Zone 3","World"],w:["Weapon_Axe_Iron_Rusty"]},
+  {id:"Skeleton_Frost_Soldier_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Frost",z:["World"]},
+  {id:"Skeleton_Frost_Soldier_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Frost"},
+  {id:"Skeleton_Incandescent_Fighter",c:"Undead",b:"hostile",sc:"Skeleton_Incandescent",hp:103,z:["World"],w:["Weapon_Sword_Steel_Incandescent"]},
+  {id:"Skeleton_Incandescent_Fighter_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Incandescent",z:["World"]},
+  {id:"Skeleton_Incandescent_Fighter_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Incandescent"},
+  {id:"Skeleton_Incandescent_Footman",c:"Undead",b:"hostile",sc:"Skeleton_Incandescent",hp:103,z:["World"],w:["Weapon_Spear_Double_Incandescent"]},
+  {id:"Skeleton_Incandescent_Footman_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Incandescent",z:["World"]},
+  {id:"Skeleton_Incandescent_Footman_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Incandescent"},
+  {id:"Skeleton_Incandescent_Head",c:"Undead",b:"hostile",sc:"Skeleton_Incandescent",hp:81,z:["World"]},
+  {id:"Skeleton_Incandescent_Mage",c:"Undead",b:"hostile",sc:"Skeleton_Incandescent",hp:103,z:["World"],w:["Weapon_Spellbook_Fire"]},
+  {id:"Skeleton_Incandescent_Mage_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Incandescent",z:["World"]},
+  {id:"Skeleton_Incandescent_Mage_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Incandescent"},
+  {id:"Skeleton_Knight",c:"Undead",b:"hostile",sc:"Skeleton",hp:74,z:["World"],w:["Weapon_Sword_Steel_Rusty"]},
+  {id:"Skeleton_Knight_Patrol",c:"Undead",b:"hostile",sc:"Skeleton",z:["World"]},
+  {id:"Skeleton_Knight_Wander",c:"Undead",b:"hostile",sc:"Skeleton"},
+  {id:"Skeleton_Mage",c:"Undead",b:"hostile",sc:"Skeleton",hp:49,z:["Zone 1","World"],w:["Weapon_Wand_Wood_Rotten"]},
+  {id:"Skeleton_Mage_Patrol",c:"Undead",b:"hostile",sc:"Skeleton",z:["World"]},
+  {id:"Skeleton_Mage_Wander",c:"Undead",b:"hostile",sc:"Skeleton"},
+  {id:"Skeleton_Pirate_Captain",c:"Undead",b:"hostile",sc:"Skeleton_Pirate",hp:61,z:["World"],w:["Weapon_Sword_Cutlass"]},
+  {id:"Skeleton_Pirate_Captain_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Pirate",z:["World"]},
+  {id:"Skeleton_Pirate_Captain_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Pirate"},
+  {id:"Skeleton_Pirate_Gunner",c:"Undead",b:"hostile",sc:"Skeleton_Pirate",hp:61,z:["World"],w:["Weapon_Gun_Blunderbuss"]},
+  {id:"Skeleton_Pirate_Gunner_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Pirate",z:["World"]},
+  {id:"Skeleton_Pirate_Gunner_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Pirate"},
+  {id:"Skeleton_Pirate_Striker",c:"Undead",b:"hostile",sc:"Skeleton_Pirate",hp:103,z:["World"],w:["Weapon_Sword_Cutlass"]},
+  {id:"Skeleton_Pirate_Striker_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Pirate",z:["World"]},
+  {id:"Skeleton_Pirate_Striker_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Pirate"},
+  {id:"Skeleton_Ranger",c:"Undead",b:"hostile",sc:"Skeleton",hp:49,z:["World"],w:["Weapon_Crossbow_Ancient_Steel"]},
+  {id:"Skeleton_Ranger_Patrol",c:"Undead",b:"hostile",sc:"Skeleton",z:["World"]},
+  {id:"Skeleton_Ranger_Wander",c:"Undead",b:"hostile",sc:"Skeleton"},
+  {id:"Skeleton_Sand_Archer",c:"Undead",b:"hostile",sc:"Skeleton_Sand",hp:61,z:["World"],w:["Weapon_Shortbow_Bronze"]},
+  {id:"Skeleton_Sand_Archer_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Sand",z:["World"]},
+  {id:"Skeleton_Sand_Archer_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Sand"},
+  {id:"Skeleton_Sand_Archmage",c:"Undead",b:"hostile",sc:"Skeleton_Sand",hp:38,z:["World"],w:["Weapon_Staff_Bronze"]},
+  {id:"Skeleton_Sand_Archmage_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Sand",z:["World"]},
+  {id:"Skeleton_Sand_Archmage_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Sand"},
+  {id:"Skeleton_Sand_Assassin",c:"Undead",b:"hostile",sc:"Skeleton_Sand",hp:61,z:["World"],w:["Weapon_Daggers_Bronze_Ancient"]},
+  {id:"Skeleton_Sand_Assassin_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Sand",z:["World"]},
+  {id:"Skeleton_Sand_Assassin_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Sand"},
+  {id:"Skeleton_Sand_Guard",c:"Undead",b:"hostile",sc:"Skeleton_Sand",hp:61,z:["World"],w:["Weapon_Sword_Bronze"]},
+  {id:"Skeleton_Sand_Guard_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Sand",z:["World"]},
+  {id:"Skeleton_Sand_Guard_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Sand"},
+  {id:"Skeleton_Sand_Mage",c:"Undead",b:"hostile",sc:"Skeleton_Sand",hp:49,z:["World"],w:["Weapon_Spellbook_Grimoire_Purple"]},
+  {id:"Skeleton_Sand_Mage_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Sand",z:["World"]},
+  {id:"Skeleton_Sand_Mage_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Sand"},
+  {id:"Skeleton_Sand_Ranger",c:"Undead",b:"hostile",sc:"Skeleton_Sand",hp:29,z:["World"],w:["Weapon_Crossbow_Ancient_Steel"]},
+  {id:"Skeleton_Sand_Ranger_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Sand",z:["World"]},
+  {id:"Skeleton_Sand_Ranger_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Sand"},
+  {id:"Skeleton_Sand_Scout",c:"Undead",b:"hostile",sc:"Skeleton_Sand",hp:29,z:["World"],w:["Weapon_Shortbow_Crude"]},
+  {id:"Skeleton_Sand_Scout_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Sand",z:["World"]},
+  {id:"Skeleton_Sand_Scout_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Sand"},
+  {id:"Skeleton_Sand_Soldier",c:"Undead",b:"hostile",sc:"Skeleton_Sand",hp:61,z:["World"],w:["Weapon_Spear_Bronze"]},
+  {id:"Skeleton_Sand_Soldier_Patrol",c:"Undead",b:"hostile",sc:"Skeleton_Sand",z:["World"]},
+  {id:"Skeleton_Sand_Soldier_Wander",c:"Undead",b:"hostile",sc:"Skeleton_Sand"},
+  {id:"Skeleton_Scout",c:"Undead",b:"hostile",sc:"Skeleton",hp:61,z:["World"],w:["Weapon_Shortbow_Crude"]},
+  {id:"Skeleton_Scout_Patrol",c:"Undead",b:"hostile",sc:"Skeleton",z:["World"]},
+  {id:"Skeleton_Scout_Wander",c:"Undead",b:"hostile",sc:"Skeleton"},
+  {id:"Skeleton_Soldier",c:"Undead",b:"hostile",sc:"Skeleton",hp:61,z:["Zone 1","World"],w:["Weapon_Axe_Iron_Rusty"]},
+  {id:"Skeleton_Soldier_Patrol",c:"Undead",b:"hostile",sc:"Skeleton",z:["World"]},
+  {id:"Skeleton_Soldier_Wander",c:"Undead",b:"hostile",sc:"Skeleton"},
+  {id:"Skrill",c:"Creature",b:"passive",sc:"Livestock",hp:30,t:1},
+  {id:"Skrill_Chick",c:"Creature",b:"passive",sc:"Livestock",hp:15,t:1},
+  {id:"Slothian",c:"Intelligent",b:"passive"},
+  {id:"Slug_Magma",c:"Creature",b:"passive",sc:"Vermin",hp:103,z:["World"]},
+  {id:"Snail_Frost",c:"Creature",b:"passive",sc:"Vermin",hp:61},
+  {id:"Snail_Magma",c:"Creature",b:"passive",sc:"Vermin",hp:61,z:["Zone 1","Zone 2","Zone 4"]},
+  {id:"Snake_Cobra",c:"Creature",b:"passive",sc:"Vermin",hp:74,z:["Zone 2","World"]},
+  {id:"Snake_Marsh",c:"Creature",b:"passive",sc:"Vermin",hp:36},
+  {id:"Snake_Rattle",c:"Creature",b:"passive",sc:"Vermin",hp:61,z:["World"]},
+  {id:"Snapdragon",c:"Creature",b:"passive",sc:"Mythic",hp:103},
+  {id:"Snapjaw",c:"Aquatic",b:"passive",sc:"Freshwater",hp:81},
+  {id:"Spark_Living",c:"Creature",b:"passive",sc:"Mythic",hp:61,z:["Zone 1","Zone 2","Zone 4"]},
+  {id:"Sparrow",c:"Avian",b:"passive",sc:"Aerial",hp:15},
+  {id:"Spawn_Void",c:"Void",b:"hostile",hp:193,z:["Portal","World"],w:["Weapon_Longsword_Void"]},
+  {id:"Spectre_Void",c:"Void",b:"hostile"},
+  {id:"Spider",c:"Creature",b:"passive",sc:"Vermin",hp:61},
+  {id:"Spider_Cave",c:"Creature",b:"passive",sc:"Vermin",hp:74,z:["Zone 1","Zone 3","World"]},
+  {id:"Spirit_Ember",c:"Elemental",b:"hostile",sc:"Spirit",hp:126},
+  {id:"Spirit_Frost",c:"Elemental",b:"hostile",sc:"Spirit",hp:81,z:["Zone 3"]},
+  {id:"Spirit_Root",c:"Elemental",b:"hostile",sc:"Spirit",hp:49,z:["Zone 1","World"]},
+  {id:"Spirit_Thunder",c:"Elemental",b:"hostile",sc:"Spirit",hp:249,z:["Zone 2"]},
+  {id:"Squirrel",c:"Creature",b:"passive",sc:"Critter",hp:15},
+  {id:"Tang_Blue",c:"Aquatic",b:"passive",sc:"Marine",hp:20,z:["World"]},
+  {id:"Tang_Chevron",c:"Aquatic",b:"passive",sc:"Marine",hp:20},
+  {id:"Tang_Lemon_Peel",c:"Aquatic",b:"passive",sc:"Marine",hp:20},
+  {id:"Tang_Sailfin",c:"Aquatic",b:"passive",sc:"Marine",hp:20},
+  {id:"Temple_Bluebird",c:"Intelligent",b:"passive",sc:"Temple",hp:18,z:["World"]},
+  {id:"Temple_Bunny",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Deer_Doe",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Deer_Stag",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Duck",c:"Intelligent",b:"passive",sc:"Temple",hp:18,z:["World"]},
+  {id:"Temple_Feran",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Feran_Longtooth",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Finch_Green",c:"Intelligent",b:"passive",sc:"Temple",hp:13,z:["World"]},
+  {id:"Temple_Frog_Blue",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Frog_Green",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Frog_Orange",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Klops",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Klops_Merchant",c:"Intelligent",b:"passive",sc:"Temple"},
+  {id:"Temple_Kweebec",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Kweebec_Elder",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Kweebec_Merchant",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Kweebec_Razorleaf",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Kweebec_Razorleaf_Patrol",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Kweebec_Razorleaf_Patrol1",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Kweebec_Razorleaf_Patrol2",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Kweebec_Razorleaf_Patrol3",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Kweebec_Razorleaf_Patrol4",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Kweebec_Razorleaf_Patrol5",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Kweebec_Rootling_Static",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Kweebec_Seedling",c:"Intelligent",b:"passive",sc:"Temple"},
+  {id:"Temple_Kweebec_Seedling_Static",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Kweebec_Static",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Mithril_Guard",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Temple_Owl_Brown",c:"Intelligent",b:"passive",sc:"Temple",hp:29,z:["World"]},
+  {id:"Temple_Squirrel",c:"Intelligent",b:"passive",sc:"Temple",z:["World"]},
+  {id:"Tetrabird",c:"Avian",b:"passive",sc:"Raptor",hp:38},
+  {id:"Tiger_Sabertooth",c:"Creature",b:"hostile",sc:"Mammal",hp:124},
+  {id:"Toad_Rhino",c:"Creature",b:"passive",sc:"Reptile",hp:124,z:["World"]},
+  {id:"Toad_Rhino_Magma",c:"Creature",b:"passive",sc:"Reptile",hp:124,z:["Zone 1","Zone 2","Zone 4","World"]},
+  {id:"Tortoise",c:"Creature",b:"passive",sc:"Reptile",hp:103},
+  {id:"Trillodon",c:"Creature",b:"passive",sc:"Mythic",hp:145},
+  {id:"Trilobite",c:"Aquatic",b:"passive",sc:"Abyssal",hp:81},
+  {id:"Trilobite_Black",c:"Aquatic",b:"passive",sc:"Abyssal",hp:81},
+  {id:"Trork_Brawler",c:"Intelligent",b:"hostile",sc:"Trork",hp:61,z:["World"],w:["Weapon_Club_Crude","Rubble_Stone"]},
+  {id:"Trork_Chieftain",c:"Intelligent",b:"hostile",sc:"Trork",hp:124,z:["World"]},
+  {id:"Trork_Doctor_Witch",c:"Intelligent",b:"hostile",sc:"Trork",hp:74,z:["World"],w:["Weapon_Staff_Crystal_Fire_Trork","Weapon_Sword_Stone_Trork"]},
+  {id:"Trork_Guard",c:"Intelligent",b:"hostile",sc:"Trork",hp:61,z:["World"],w:["Weapon_Spear_Stone_Trork","Weapon_Daggers_Stone_Trork"]},
+  {id:"Trork_Hunter",c:"Intelligent",b:"hostile",sc:"Trork",hp:61,z:["World"],w:["Weapon_Sword_Stone_Trork","Weapon_Axe_Stone_Trork"]},
+  {id:"Trork_Mauler",c:"Intelligent",b:"hostile",sc:"Trork",hp:61,z:["World"],w:["Weapon_Mace_Crude","Rubble_Stone"]},
+  {id:"Trork_Sentry",c:"Intelligent",b:"hostile",sc:"Trork",hp:61,z:["World"],w:["Weapon_Spear_Stone_Trork","Weapon_Spear_Stone_Trork"]},
+  {id:"Trork_Sentry_Patrol",c:"Intelligent",b:"hostile",sc:"Trork",hp:61,w:["Weapon_Spear_Stone_Trork","Weapon_Spear_Stone_Trork"]},
+  {id:"Trork_Shaman",c:"Intelligent",b:"hostile",sc:"Trork",hp:61,z:["World"],w:["Weapon_Staff_Crystal_Fire_Trork","Weapon_Daggers_Stone_Trork"]},
+  {id:"Trork_Unarmed",c:"Intelligent",b:"hostile",sc:"Trork",hp:42},
+  {id:"Trork_Warrior",c:"Intelligent",b:"hostile",sc:"Trork",hp:61,z:["Zone 1","World"],w:["Weapon_Battleaxe_Stone_Trork","Rubble_Stone_Medium"]},
+  {id:"Trork_Warrior_Patrol",c:"Intelligent",b:"hostile",sc:"Trork",hp:61,z:["World"],w:["Weapon_Battleaxe_Stone_Trork","Rubble_Stone_Medium"]},
+  {id:"Trout_Rainbow",c:"Aquatic",b:"passive",sc:"Freshwater",hp:29,z:["World"]},
+  {id:"Tuluk_Fisherman",c:"Intelligent",b:"neutral",sc:"Tuluk",hp:124,w:["Weapon_Spear_Fishbone","Weapon_Spear_Fishbone"]},
+  {id:"Turkey",c:"Creature",b:"passive",sc:"Livestock",hp:38,t:1},
+  {id:"Turkey_Chick",c:"Creature",b:"passive",sc:"Livestock",hp:15,t:1},
+  {id:"Vulture",c:"Avian",b:"passive",sc:"Raptor",hp:61},
+  {id:"Warthog",c:"Creature",b:"passive",sc:"Livestock",hp:103,t:1},
+  {id:"Warthog_Piglet",c:"Creature",b:"passive",sc:"Livestock",hp:81,t:1},
+  {id:"Werewolf",c:"Undead",b:"hostile",hp:283},
+  {id:"Whale_Humpback",c:"Aquatic",b:"passive",sc:"Abyssal",hp:400},
+  {id:"Wolf_Black",c:"Creature",b:"hostile",sc:"Mammal",hp:103,z:["World"]},
+  {id:"Wolf_Outlander_Priest",c:"Intelligent",b:"hostile",sc:"Outlander",hp:107},
+  {id:"Wolf_Outlander_Sorcerer",c:"Intelligent",b:"hostile",sc:"Outlander",hp:118},
+  {id:"Wolf_Trork_Hunter",c:"Intelligent",b:"hostile",sc:"Trork",hp:38},
+  {id:"Wolf_Trork_Shaman",c:"Intelligent",b:"hostile",sc:"Trork",hp:118},
+  {id:"Wolf_White",c:"Creature",b:"passive",sc:"Mammal",hp:103,z:["World"]},
+  {id:"Woodpecker",c:"Avian",b:"passive",sc:"Aerial",hp:15},
+  {id:"Wraith",c:"Undead",b:"hostile",hp:193,z:["World"],w:["Weapon_Battleaxe_Scythe_Void"]},
+  {id:"Wraith_Lantern",c:"Undead",b:"hostile",hp:30,z:["World"]},
+  {id:"Yeti",c:"Creature",b:"hostile",sc:"Mythic",hp:226,z:["World"]},
+  {id:"Zombie",c:"Undead",b:"hostile",sc:"Zombie",hp:49,z:["Zone 4","World"]},
+  {id:"Zombie_Aberrant",c:"Undead",b:"hostile",sc:"Zombie",hp:400},
+  {id:"Zombie_Aberrant_Big",c:"Undead",b:"hostile",sc:"Zombie",hp:341},
+  {id:"Zombie_Aberrant_Small",c:"Undead",b:"hostile",sc:"Zombie",hp:126},
+  {id:"Zombie_Burnt",c:"Undead",b:"hostile",sc:"Zombie",hp:126,z:["Zone 4"]},
+  {id:"Zombie_Frost",c:"Undead",b:"hostile",sc:"Zombie",hp:81,z:["World"]},
+  {id:"Zombie_Sand",c:"Undead",b:"hostile",sc:"Zombie",hp:49,z:["World"]}
+];
+
+// ===== META OBJECTS =====
+const CAT_META = {
+  'Creature': {label:'Creature',color:'var(--cat-creature)',emoji:'\uD83D\uDC3E'},
+  'Intelligent': {label:'Intelligent',color:'var(--cat-intelligent)',emoji:'\uD83E\uDDD0'},
+  'Undead': {label:'Undead',color:'var(--cat-undead)',emoji:'\uD83D\uDC80'},
+  'Aquatic': {label:'Aquatic',color:'var(--cat-aquatic)',emoji:'\uD83D\uDC1F'},
+  'Avian': {label:'Avian',color:'var(--cat-avian)',emoji:'\uD83E\uDD85'},
+  'Elemental': {label:'Elemental',color:'var(--cat-elemental)',emoji:'\uD83D\uDD25'},
+  'Boss': {label:'Boss',color:'var(--cat-boss)',emoji:'\uD83D\uDC51'},
+  'Void': {label:'Void',color:'var(--cat-void)',emoji:'\uD83C\uDF00'}
+};
+const CAT_ORDER = ['Creature','Intelligent','Undead','Aquatic','Avian','Elemental','Boss','Void'];
+
+const BEH_META = {
+  'hostile': {label:'Hostile',color:'var(--beh-hostile)',emoji:'\u2694\uFE0F'},
+  'passive': {label:'Passive',color:'var(--beh-passive)',emoji:'\uD83D\uDE4F'},
+  'neutral': {label:'Neutral',color:'var(--beh-neutral)',emoji:'\u26A0\uFE0F'},
+  'tameable': {label:'Tameable',color:'var(--beh-tameable)',emoji:'\uD83D\uDC9A'},
+  'boss': {label:'Boss',color:'var(--beh-boss)',emoji:'\uD83D\uDC51'}
+};
+const BEH_ORDER = ['hostile','passive','neutral','tameable','boss'];
+
+const ZONE_ORDER = ['Zone 1','Zone 2','Zone 3','Zone 4','World','Portal'];
+
+// Subcategory metadata per category (order, icons, colors)
+const SUBCAT_META = {
+  'Creature': {
+    order: ['Livestock','Mammal','Vermin','Mythic','Reptile','Critter'],
+    icons: {Livestock:'\uD83D\uDC04',Mammal:'\uD83E\uDD81',Vermin:'\uD83D\uDD77\uFE0F',Mythic:'\uD83E\uDD84',Reptile:'\uD83E\uDD8E',Critter:'\uD83D\uDC01'},
+    color: 'var(--cat-creature)', bg: 'rgba(34,197,94,0.10)'
+  },
+  'Intelligent': {
+    order: ['Temple','Goblin','Trork','Kweebec','Outlander','Dungeon','Scarak','Feran','Tuluk'],
+    icons: {Temple:'\uD83C\uDFDB\uFE0F',Goblin:'\uD83D\uDC7A',Trork:'\uD83E\uDE93',Kweebec:'\uD83C\uDF3F',Outlander:'\u2694\uFE0F',Dungeon:'\uD83C\uDFF0',Scarak:'\uD83E\uDD82',Feran:'\uD83D\uDC3E',Tuluk:'\uD83C\uDFA3'},
+    color: 'var(--cat-intelligent)', bg: 'rgba(59,130,246,0.10)'
+  },
+  'Undead': {
+    order: ['Skeleton','Skeleton_Burnt','Skeleton_Frost','Skeleton_Sand','Skeleton_Incandescent','Skeleton_Pirate','Zombie','Dungeon'],
+    icons: {Skeleton:'\uD83D\uDC80',Skeleton_Burnt:'\uD83D\uDD25',Skeleton_Frost:'\u2744\uFE0F',Skeleton_Sand:'\uD83C\uDFDC\uFE0F',Skeleton_Incandescent:'\u2728',Skeleton_Pirate:'\u2620\uFE0F',Zombie:'\uD83E\uDDDF',Dungeon:'\uD83C\uDFF0'},
+    labels: {Skeleton_Burnt:'Burnt',Skeleton_Frost:'Frost',Skeleton_Sand:'Sand',Skeleton_Incandescent:'Incandescent',Skeleton_Pirate:'Pirate'},
+    color: 'var(--cat-undead)', bg: 'rgba(168,85,247,0.10)'
+  },
+  'Aquatic': {
+    order: ['Marine','Freshwater','Abyssal'],
+    icons: {Marine:'\uD83E\uDD88',Freshwater:'\uD83D\uDC1F',Abyssal:'\uD83D\uDC19'},
+    color: 'var(--cat-aquatic)', bg: 'rgba(6,182,212,0.10)'
+  },
+  'Avian': {
+    order: ['Aerial','Raptor','Fowl'],
+    icons: {Aerial:'\uD83D\uDC26',Raptor:'\uD83E\uDD85',Fowl:'\uD83D\uDC14'},
+    color: 'var(--cat-avian)', bg: 'rgba(245,158,11,0.10)'
+  },
+  'Elemental': {
+    order: ['Golem','Spirit'],
+    icons: {Golem:'\uD83E\uDEA8',Spirit:'\uD83D\uDC7B'},
+    color: 'var(--cat-elemental)', bg: 'rgba(249,115,22,0.10)'
+  }
+};
+
+function catHasSubcats(cat) {
+  return !!SUBCAT_META[cat];
+}
+
+function getEntitySubcat(e) {
+  return e.sc || null;
+}
+
+// ===== THEME (runs early to prevent flash) =====
+function initTheme() {
+  var saved = localStorage.getItem('hyspawns-theme');
+  if (saved) {
+    document.documentElement.dataset.theme = saved;
+  } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    document.documentElement.dataset.theme = 'light';
+  }
+  updateThemeIcon();
+}
+
+function toggleTheme() {
+  var current = document.documentElement.dataset.theme;
+  var next = current === 'light' ? 'dark' : 'light';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('hyspawns-theme', next);
+  updateThemeIcon();
+}
+
+function updateThemeIcon() {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var isLight = document.documentElement.dataset.theme === 'light';
+  btn.textContent = isLight ? '\uD83C\uDF19' : '\u2600\uFE0F';
+  btn.title = isLight ? 'Switch to dark mode' : 'Switch to light mode';
+}
+
+initTheme();
+
+window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function(e) {
+  if (!localStorage.getItem('hyspawns-theme')) {
+    document.documentElement.dataset.theme = e.matches ? 'light' : 'dark';
+    updateThemeIcon();
+  }
+});
+
+// ===== STATE =====
+let currentView = 'category';
+let activeCategory = null;
+let activeZone = null;
+let activeBehavior = null;
+let activeSubcat = null;
+let searchQuery = '';
+let copyFormat = 'spawn';
+
+// ===== SVGs =====
+const COPY_SVG = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="8" height="8" rx="1.5"/><path d="M3 11V3a1.5 1.5 0 011.5-1.5H11"/></svg>';
+const CHECK_SVG = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg>';
+const CHEVRON_SVG = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4l4 4-4 4"/></svg>';
+
+// ===== DOM REFS =====
+const $sidebar = document.getElementById('sidebar');
+const $sidebarCategories = document.getElementById('sidebar-categories');
+const $sidebarZones = document.getElementById('sidebar-zones');
+const $sidebarBehaviors = document.getElementById('sidebar-behaviors');
+const $content = document.getElementById('content');
+const $emptyState = document.getElementById('empty-state');
+const $search = document.getElementById('search');
+const $counterBadge = document.getElementById('counter-badge');
+const $viewInfo = document.getElementById('view-info');
+const $catPills = document.getElementById('cat-pills');
+const $subcatPills = document.getElementById('subcat-pills');
+const $activeFilters = document.getElementById('active-filters');
+const $toast = document.getElementById('toast');
+
+// ===== COUNTS =====
+function countBy(arr, key) {
+  const map = {};
+  arr.forEach(function(e) { var val = e[key]; if (val !== undefined) map[val] = (map[val] || 0) + 1; });
+  return map;
+}
+
+// Count entities with each zone (entities can have multiple zones)
+function countZones(arr) {
+  const map = {};
+  arr.forEach(function(e) {
+    var zones = e.z || [];
+    zones.forEach(function(z) { map[z] = (map[z] || 0) + 1; });
+  });
+  return map;
+}
+
+const catCounts = countBy(ENTITIES, 'c');
+const behCounts = countBy(ENTITIES, 'b');
+behCounts['tameable'] = ENTITIES.filter(function(e) { return e.t; }).length;
+const zoneCounts = countZones(ENTITIES);
+
+// ===== SIDEBAR RENDERING =====
+function renderSidebar() {
+  // Categories
+  var html = '<div class="sidebar-item' + (activeCategory === null ? ' active' : '') + '" data-cat="">' +
+    '<span class="sidebar-dot" style="background:var(--accent);"></span>' +
+    'All Categories' +
+    '<span class="sidebar-count">' + ENTITIES.length + '</span></div>';
+  CAT_ORDER.forEach(function(cat) {
+    var meta = CAT_META[cat];
+    var count = catCounts[cat] || 0;
+    if (count === 0) return;
+    html += '<div class="sidebar-item' + (activeCategory === cat ? ' active' : '') + '" data-cat="' + cat + '">' +
+      '<span class="sidebar-dot" style="background:' + meta.color + ';"></span>' +
+      meta.label +
+      '<span class="sidebar-count">' + count + '</span></div>';
+  });
+  $sidebarCategories.innerHTML = html;
+
+  // Zones
+  html = '<div class="sidebar-item' + (activeZone === null ? ' active' : '') + '" data-zone="">' +
+    '<span class="sidebar-dot" style="background:var(--accent);"></span>' +
+    'All Zones' +
+    '<span class="sidebar-count">' + ENTITIES.filter(function(e){ return e.z && e.z.length > 0; }).length + '</span></div>';
+  ZONE_ORDER.forEach(function(zone) {
+    var count = zoneCounts[zone] || 0;
+    if (count === 0) return;
+    html += '<div class="sidebar-item' + (activeZone === zone ? ' active' : '') + '" data-zone="' + zone + '">' +
+      '<span class="sidebar-dot" style="background:var(--accent);opacity:0.6;"></span>' +
+      zone +
+      '<span class="sidebar-count">' + count + '</span></div>';
+  });
+  $sidebarZones.innerHTML = html;
+
+  // Behaviors
+  html = '<div class="sidebar-item' + (activeBehavior === null ? ' active' : '') + '" data-beh="">' +
+    '<span class="sidebar-dot" style="background:var(--accent);"></span>' +
+    'All Behaviors' +
+    '<span class="sidebar-count">' + ENTITIES.length + '</span></div>';
+  BEH_ORDER.forEach(function(beh) {
+    var meta = BEH_META[beh];
+    var count = behCounts[beh] || 0;
+    if (count === 0) return;
+    html += '<div class="sidebar-item' + (activeBehavior === beh ? ' active' : '') + '" data-beh="' + beh + '">' +
+      '<span class="sidebar-emoji">' + meta.emoji + '</span>' +
+      meta.label +
+      '<span class="sidebar-count">' + count + '</span></div>';
+  });
+  $sidebarBehaviors.innerHTML = html;
+
+  // Wire category clicks
+  $sidebarCategories.querySelectorAll('.sidebar-item').forEach(function(el) {
+    el.addEventListener('click', function() {
+      var val = el.dataset.cat;
+      activeCategory = val === '' ? null : val;
+      activeSubcat = null;
+      renderSidebar();
+      renderCategoryPills();
+      renderSubcatPills();
+      renderActiveFilters();
+      renderCurrentView();
+    });
+  });
+
+  // Wire zone clicks
+  $sidebarZones.querySelectorAll('.sidebar-item').forEach(function(el) {
+    el.addEventListener('click', function() {
+      var val = el.dataset.zone;
+      activeZone = val === '' ? null : val;
+      renderSidebar();
+      renderSubcatPills();
+      renderActiveFilters();
+      renderCurrentView();
+    });
+  });
+
+  // Wire behavior clicks
+  $sidebarBehaviors.querySelectorAll('.sidebar-item').forEach(function(el) {
+    el.addEventListener('click', function() {
+      var val = el.dataset.beh;
+      activeBehavior = val === '' ? null : val;
+      renderSidebar();
+      renderSubcatPills();
+      renderActiveFilters();
+      renderCurrentView();
+    });
+  });
+}
+
+// ===== CATEGORY PILLS =====
+function renderCategoryPills() {
+  var html = '<button class="filter-pill' + (activeCategory === null ? ' active' : '') + '" data-cat="">All <span class="filter-pill-count">' + ENTITIES.length + '</span></button>';
+  CAT_ORDER.forEach(function(cat) {
+    var meta = CAT_META[cat];
+    var count = catCounts[cat] || 0;
+    if (count === 0) return;
+    html += '<button class="filter-pill' + (activeCategory === cat ? ' active' : '') + '" data-cat="' + cat + '">' +
+      '<span class="filter-pill-dot" style="background:' + meta.color + ';"></span>' +
+      meta.label +
+      ' <span class="filter-pill-count">' + count + '</span></button>';
+  });
+  $catPills.innerHTML = html;
+
+  $catPills.querySelectorAll('.filter-pill').forEach(function(el) {
+    el.addEventListener('click', function() {
+      var val = el.dataset.cat;
+      activeCategory = val === '' ? null : val;
+      activeSubcat = null;
+      renderSidebar();
+      renderCategoryPills();
+      renderSubcatPills();
+      renderActiveFilters();
+      renderCurrentView();
+    });
+  });
+}
+
+// ===== SUBCATEGORY PILLS =====
+function renderSubcatPills() {
+  var showSubcats = activeCategory && catHasSubcats(activeCategory);
+  if (!showSubcats) {
+    $subcatPills.innerHTML = '';
+    $subcatPills.style.display = 'none';
+    return;
+  }
+
+  var meta = SUBCAT_META[activeCategory];
+  $subcatPills.style.display = 'flex';
+  $subcatPills.style.setProperty('--subcat-color', meta.color);
+  $subcatPills.style.setProperty('--subcat-active-bg', meta.bg);
+
+  // Count entities per subcategory (respecting other active filters + search)
+  var catEntities = ENTITIES.filter(function(e) {
+    if (e.c !== activeCategory) return false;
+    if (activeZone) {
+      var zones = e.z || [];
+      if (zones.indexOf(activeZone) === -1) return false;
+    }
+    if (activeBehavior) {
+      if (activeBehavior === 'tameable') { if (!e.t) return false; }
+      else { if (e.b !== activeBehavior) return false; }
+    }
+    if (searchQuery) {
+      var hay = (e.id + ' ' + e.c + ' ' + (e.sc || '') + ' ' + e.b).toLowerCase().replace(/_/g, ' ');
+      var tokens = searchQuery.toLowerCase().trim().split(/\s+/);
+      if (!tokens.every(function(t) { return hay.indexOf(t) !== -1; })) return false;
+    }
+    return true;
+  });
+
+  var subcatCounts = {};
+  var otherCount = 0;
+  catEntities.forEach(function(e) {
+    var sc = getEntitySubcat(e);
+    if (sc) subcatCounts[sc] = (subcatCounts[sc] || 0) + 1;
+    else otherCount++;
+  });
+
+  var totalCat = catEntities.length;
+  var catMeta = CAT_META[activeCategory];
+  var labels = meta.labels || {};
+  var html = '<button class="subcat-pill' + (activeSubcat === null ? ' active' : '') + '" data-subcat="">' +
+    catMeta.emoji + ' All ' + catMeta.label + ' <span class="subcat-pill-count">' + totalCat + '</span></button>';
+
+  meta.order.forEach(function(sc) {
+    var count = subcatCounts[sc] || 0;
+    if (count === 0) return;
+    var icon = meta.icons[sc] || '';
+    var label = labels[sc] || sc;
+    html += '<button class="subcat-pill' + (activeSubcat === sc ? ' active' : '') + '" data-subcat="' + sc + '">' +
+      icon + ' ' + label +
+      ' <span class="subcat-pill-count">' + count + '</span></button>';
+  });
+
+  if (otherCount > 0) {
+    html += '<button class="subcat-pill' + (activeSubcat === '__other__' ? ' active' : '') + '" data-subcat="__other__">' +
+      '\u2753 Other <span class="subcat-pill-count">' + otherCount + '</span></button>';
+  }
+
+  $subcatPills.innerHTML = html;
+
+  $subcatPills.querySelectorAll('.subcat-pill').forEach(function(el) {
+    el.addEventListener('click', function() {
+      var val = el.dataset.subcat;
+      activeSubcat = val === '' ? null : val;
+      renderSubcatPills();
+      renderActiveFilters();
+      renderCurrentView();
+    });
+  });
+}
+
+// ===== ACTIVE FILTER TAGS =====
+function renderActiveFilters() {
+  var html = '';
+  if (activeCategory) {
+    var meta = CAT_META[activeCategory];
+    html += '<span class="active-filter-tag" onclick="clearFilter(\'cat\')">' + meta.emoji + ' ' + meta.label + ' <span class="x">&times;</span></span>';
+  }
+  if (activeZone) {
+    html += '<span class="active-filter-tag" onclick="clearFilter(\'zone\')">' + activeZone + ' <span class="x">&times;</span></span>';
+  }
+  if (activeSubcat) {
+    var scLabel = activeSubcat;
+    if (activeSubcat === '__other__') {
+      scLabel = 'Other';
+    } else if (activeCategory && SUBCAT_META[activeCategory]) {
+      var labels = SUBCAT_META[activeCategory].labels || {};
+      scLabel = labels[activeSubcat] || activeSubcat;
+    }
+    html += '<span class="active-filter-tag" onclick="clearFilter(\'subcat\')">' + scLabel + ' <span class="x">&times;</span></span>';
+  }
+  if (activeBehavior) {
+    var meta = BEH_META[activeBehavior];
+    html += '<span class="active-filter-tag" onclick="clearFilter(\'beh\')">' + meta.emoji + ' ' + meta.label + ' <span class="x">&times;</span></span>';
+  }
+  $activeFilters.innerHTML = html;
+}
+
+function clearFilter(type) {
+  if (type === 'cat') { activeCategory = null; activeSubcat = null; }
+  if (type === 'subcat') activeSubcat = null;
+  if (type === 'zone') activeZone = null;
+  if (type === 'beh') activeBehavior = null;
+  renderSidebar();
+  renderCategoryPills();
+  renderSubcatPills();
+  renderActiveFilters();
+  renderCurrentView();
+}
+
+// ===== FILTERING =====
+function getFilteredEntities() {
+  return ENTITIES.filter(function(e) {
+    if (activeCategory && e.c !== activeCategory) return false;
+    if (activeSubcat) {
+      if (activeSubcat === '__other__') { if (e.sc) return false; }
+      else { if (e.sc !== activeSubcat) return false; }
+    }
+    if (activeZone) {
+      var zones = e.z || [];
+      if (zones.indexOf(activeZone) === -1) return false;
+    }
+    if (activeBehavior) {
+      if (activeBehavior === 'tameable') { if (!e.t) return false; }
+      else { if (e.b !== activeBehavior) return false; }
+    }
+    if (searchQuery) {
+      var hay = (e.id + ' ' + e.c + ' ' + (e.sc || '') + ' ' + e.b).toLowerCase().replace(/_/g, ' ');
+      var tokens = searchQuery.toLowerCase().trim().split(/\s+/);
+      if (!tokens.every(function(t) { return hay.indexOf(t) !== -1; })) return false;
+    }
+    return true;
+  });
+}
+
+// ===== ENTITY ROW HTML =====
+function entityRowHTML(e) {
+  var catClass = e.c.toLowerCase();
+  var behClass = e.b.toLowerCase();
+  var behMeta = BEH_META[e.b] || {emoji:'',label:e.b};
+
+  var html = '<div class="entity-row" data-id="' + e.id + '" onclick="copyRow(this)">';
+  html += '<span class="entity-id">' + e.id + '</span>';
+  html += '<span class="cat-tag ' + catClass + '">' + e.c + '</span>';
+  html += '<span class="beh-tag ' + behClass + '">' + behMeta.emoji + ' ' + e.b + '</span>';
+  if (e.t) {
+    html += '<span class="beh-tag tameable">' + BEH_META.tameable.emoji + ' Tameable</span>';
+  }
+  if (e.hp) {
+    html += '<span class="hp-tag">' + e.hp + ' HP</span>';
+  }
+  if (e.z && e.z.length > 0) {
+    html += '<span class="zone-tags">';
+    e.z.forEach(function(z) { html += '<span class="zone-tag">' + z + '</span>'; });
+    html += '</span>';
+  }
+  html += '<span class="copy-icon" onclick="event.stopPropagation();copyRow(this.parentElement)">' + COPY_SVG + '</span>';
+  html += '</div>';
+  return html;
+}
+
+// ===== RENDER BY CATEGORY =====
+function renderByCategory(entities) {
+  var groups = {};
+  CAT_ORDER.forEach(function(cat) { groups[cat] = []; });
+  entities.forEach(function(e) {
+    if (!groups[e.c]) groups[e.c] = [];
+    groups[e.c].push(e);
+  });
+
+  var html = '';
+  var expandedCount = 0;
+  CAT_ORDER.forEach(function(cat) {
+    var list = groups[cat];
+    if (!list || list.length === 0) return;
+
+    var expanded = expandedCount < 3;
+    expandedCount++;
+    var meta = CAT_META[cat];
+
+    html += '<div class="action-group' + (expanded ? '' : ' collapsed') + '" data-cat="' + cat + '">';
+    html += '<div class="action-group-header" onclick="toggleGroup(this.parentElement)">';
+    html += '<span class="action-group-dot" style="background:' + meta.color + ';"></span>';
+    html += '<span class="action-group-title">' + meta.emoji + ' ' + meta.label + '</span>';
+    html += '<span class="action-group-count">' + list.length + '</span>';
+    html += '<span class="action-group-chevron">' + CHEVRON_SVG + '</span>';
+    html += '</div>';
+    html += '<div class="action-group-body" data-rendered="' + (expanded ? 'true' : 'false') + '" data-group-cat="' + cat + '">';
+    if (expanded) {
+      list.forEach(function(e) { html += entityRowHTML(e); });
+    }
+    html += '</div>';
+    html += '</div>';
+  });
+
+  $content.innerHTML = html;
+}
+
+// ===== RENDER BY ZONE =====
+function renderByZone(entities) {
+  // Group by zone (entities can appear in multiple zones)
+  var groups = {};
+  var noZone = [];
+  ZONE_ORDER.forEach(function(z) { groups[z] = []; });
+
+  entities.forEach(function(e) {
+    var zones = e.z || [];
+    if (zones.length === 0) {
+      noZone.push(e);
+    } else {
+      zones.forEach(function(z) {
+        if (!groups[z]) groups[z] = [];
+        groups[z].push(e);
+      });
+    }
+  });
+
+  var html = '';
+  var expandedCount = 0;
+
+  ZONE_ORDER.forEach(function(zone) {
+    var list = groups[zone];
+    if (!list || list.length === 0) return;
+
+    var expanded = expandedCount < 3;
+    expandedCount++;
+
+    html += '<div class="action-group' + (expanded ? '' : ' collapsed') + '" data-zone="' + zone + '">';
+    html += '<div class="action-group-header" onclick="toggleGroup(this.parentElement)">';
+    html += '<span class="action-group-dot" style="background:var(--accent);"></span>';
+    html += '<span class="action-group-title">' + zone + '</span>';
+    html += '<span class="action-group-count">' + list.length + '</span>';
+    html += '<span class="action-group-chevron">' + CHEVRON_SVG + '</span>';
+    html += '</div>';
+    html += '<div class="action-group-body" data-rendered="' + (expanded ? 'true' : 'false') + '" data-group-zone="' + zone + '">';
+    if (expanded) {
+      list.forEach(function(e) { html += entityRowHTML(e); });
+    }
+    html += '</div>';
+    html += '</div>';
+  });
+
+  // No zone assigned group
+  if (noZone.length > 0) {
+    var expanded = expandedCount < 3;
+    html += '<div class="action-group' + (expanded ? '' : ' collapsed') + '">';
+    html += '<div class="action-group-header" onclick="toggleGroup(this.parentElement)">';
+    html += '<span class="action-group-dot" style="background:var(--t3);"></span>';
+    html += '<span class="action-group-title">No Zone Assigned</span>';
+    html += '<span class="action-group-count">' + noZone.length + '</span>';
+    html += '<span class="action-group-chevron">' + CHEVRON_SVG + '</span>';
+    html += '</div>';
+    html += '<div class="action-group-body" data-rendered="' + (expanded ? 'true' : 'false') + '" data-group-zone="none">';
+    if (expanded) {
+      noZone.forEach(function(e) { html += entityRowHTML(e); });
+    }
+    html += '</div>';
+    html += '</div>';
+  }
+
+  $content.innerHTML = html;
+}
+
+// ===== TOGGLE GROUP (lazy rendering) =====
+function toggleGroup(group) {
+  var body = group.querySelector('.action-group-body');
+  var isCollapsed = group.classList.contains('collapsed');
+
+  if (isCollapsed) {
+    if (body.dataset.rendered === 'false') {
+      var entities = getFilteredEntities();
+      var html = '';
+
+      var groupCat = body.dataset.groupCat;
+      var groupZone = body.dataset.groupZone;
+
+      if (groupCat) {
+        entities.filter(function(e) { return e.c === groupCat; }).forEach(function(e) {
+          html += entityRowHTML(e);
+        });
+      } else if (groupZone === 'none') {
+        entities.filter(function(e) { return !e.z || e.z.length === 0; }).forEach(function(e) {
+          html += entityRowHTML(e);
+        });
+      } else if (groupZone) {
+        entities.filter(function(e) { return e.z && e.z.indexOf(groupZone) !== -1; }).forEach(function(e) {
+          html += entityRowHTML(e);
+        });
+      }
+
+      body.innerHTML = html;
+      body.dataset.rendered = 'true';
+    }
+    group.classList.remove('collapsed');
+  } else {
+    group.classList.add('collapsed');
+  }
+}
+
+// ===== RENDER CURRENT VIEW =====
+function renderCurrentView() {
+  var entities = getFilteredEntities();
+
+  // Update counter
+  if (searchQuery) {
+    $counterBadge.textContent = entities.length + ' results';
+  } else {
+    $counterBadge.textContent = entities.length + ' entities';
+  }
+
+  // Update view info
+  if (currentView === 'category') {
+    $viewInfo.textContent = 'Grouped by category';
+  } else {
+    $viewInfo.textContent = 'Grouped by zone';
+  }
+
+  // Show/hide empty state
+  if (entities.length === 0) {
+    $content.innerHTML = '';
+    $emptyState.classList.add('visible');
+    return;
+  } else {
+    $emptyState.classList.remove('visible');
+  }
+
+  if (currentView === 'category') {
+    renderByCategory(entities);
+  } else {
+    renderByZone(entities);
+  }
+}
+
+// ===== VIEW TOGGLE =====
+document.querySelectorAll('.view-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    currentView = btn.dataset.view;
+    document.querySelectorAll('.view-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    renderCurrentView();
+  });
+});
+
+// ===== SEARCH =====
+$search.addEventListener('input', function() {
+  searchQuery = $search.value;
+  renderSubcatPills();
+  renderCurrentView();
+});
+
+document.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+    e.preventDefault();
+    $search.focus();
+  }
+  if (e.key === 'Escape' && document.activeElement === $search) {
+    $search.value = '';
+    searchQuery = '';
+    $search.blur();
+    renderSubcatPills();
+    renderCurrentView();
+  }
+});
+
+// ===== SUGGESTION PILLS =====
+document.querySelectorAll('.suggestion-pill').forEach(function(pill) {
+  pill.addEventListener('click', function() {
+    $search.value = pill.textContent;
+    searchQuery = pill.textContent;
+    $search.focus();
+    renderSubcatPills();
+    renderCurrentView();
+  });
+});
+
+// ===== COPY SYSTEM =====
+function formatCommand(entityId) {
+  if (copyFormat === 'spawn') return '/npc spawn ' + entityId;
+  if (copyFormat === 'coords') return '/npc spawn ' + entityId + ' ~ ~ ~';
+  return '"NPCId": "' + entityId + '"';
+}
+
+function copyToClipboard(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    return navigator.clipboard.writeText(text);
+  }
+  var ta = document.createElement('textarea');
+  ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+  document.body.removeChild(ta); return Promise.resolve();
+}
+
+function copyRow(row) {
+  var id = row.dataset.id;
+  copyToClipboard(formatCommand(id)).then(function() {
+    var icon = row.querySelector('.copy-icon');
+    icon.innerHTML = CHECK_SVG;
+    icon.classList.add('copied');
+    showToast(formatCommand(id));
+    setTimeout(function() { icon.innerHTML = COPY_SVG; icon.classList.remove('copied'); }, 1500);
+  });
+}
+
+function showToast(cmd) {
+  $toast.innerHTML = '<span style="color:var(--success);margin-right:6px">\u2713</span>' + cmd;
+  $toast.classList.add('visible');
+  setTimeout(function() { $toast.classList.remove('visible'); }, 2000);
+}
+
+// ===== HAMBURGER (mobile) =====
+function toggleSidebar() {
+  document.querySelector('.sidebar').classList.toggle('open');
+}
+
+document.getElementById('hamburger').addEventListener('click', function() {
+  toggleSidebar();
+});
+
+// Close sidebar when clicking outside on mobile
+document.addEventListener('click', function(e) {
+  if ($sidebar.classList.contains('open') && !$sidebar.contains(e.target) && e.target.id !== 'hamburger') {
+    $sidebar.classList.remove('open');
+  }
+});
+
+// ===== MOBILE LONG-PRESS COPY POPUP =====
+var longPressTimer = null;
+function setupLongPress() {
+  if (window.innerWidth > 768) return;
+  document.addEventListener('touchstart', function(e) {
+    var row = e.target.closest('.entity-row');
+    if (!row) return;
+    longPressTimer = setTimeout(function() { showCopyPopup(row, e.touches[0]); }, 500);
+  });
+  document.addEventListener('touchend', function() { clearTimeout(longPressTimer); });
+  document.addEventListener('touchmove', function() { clearTimeout(longPressTimer); });
+}
+
+function showCopyPopup(row, touch) {
+  row.dataset.longPressed = 'true';
+  var id = row.dataset.id;
+  var popup = document.createElement('div');
+  popup.className = 'copy-popup';
+  popup.innerHTML =
+    '<div class="copy-popup-item" onclick="popupCopy(\'' + id + '\',\'spawn\',this)">Copy /npc spawn</div>' +
+    '<div class="copy-popup-item" onclick="popupCopy(\'' + id + '\',\'coords\',this)">Copy /npc spawn ~ ~ ~</div>' +
+    '<div class="copy-popup-item" onclick="popupCopy(\'' + id + '\',\'json\',this)">Copy JSON</div>';
+  popup.style.top = touch.clientY + 'px';
+  popup.style.left = Math.min(touch.clientX, window.innerWidth - 180) + 'px';
+  document.body.appendChild(popup);
+
+  setTimeout(function() {
+    document.addEventListener('touchstart', function dismiss(e) {
+      if (!e.target.closest('.copy-popup')) {
+        popup.remove();
+        document.removeEventListener('touchstart', dismiss);
+      }
+    });
+  }, 10);
+}
+
+function popupCopy(id, fmt, el) {
+  var oldFmt = copyFormat;
+  copyFormat = fmt;
+  var cmd = formatCommand(id);
+  copyFormat = oldFmt;
+  copyToClipboard(cmd).then(function() {
+    showToast(cmd);
+    el.closest('.copy-popup').remove();
+  });
+}
+
+// ===== INIT =====
+function initCopyFormat() {
+  document.querySelectorAll('.sidebar-format').forEach(function(el) {
+    el.addEventListener('click', function() {
+      copyFormat = el.dataset.format;
+      document.querySelectorAll('.sidebar-format').forEach(function(f) { f.classList.remove('active'); });
+      el.classList.add('active');
+      var labels = {'spawn': '/npc spawn <id>', 'coords': '/npc spawn <id> ~ ~ ~', 'json': '"NPCId" JSON'};
+      showToast('Copy format: ' + labels[copyFormat]);
+    });
+  });
+}
+
+function init() {
+  renderSidebar();
+  renderCategoryPills();
+  renderSubcatPills();
+  renderActiveFilters();
+  renderCurrentView();
+  $search.placeholder = 'Search HySpawns...';
+  initCopyFormat();
+  setupLongPress();
+  document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+  document.getElementById('ss-btn').addEventListener('click', function(e) {
+    e.stopPropagation();
+    var sw = document.getElementById('site-switcher');
+    var menu = document.getElementById('ss-menu');
+    sw.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  document.addEventListener('click', function() {
+    document.getElementById('site-switcher').classList.remove('open');
+    document.getElementById('ss-menu').classList.remove('open');
+  });
+}
+init();
+
+// ===== CONTEST BANNER =====
+const bannerClose = document.getElementById('banner-close');
+const banner = document.getElementById('contest-banner');
+if (bannerClose && banner) {
+  if (localStorage.getItem('contest-banner-closed') === 'true') {
+    banner.style.display = 'none';
+  }
+  bannerClose.addEventListener('click', () => {
+    banner.style.display = 'none';
+    localStorage.setItem('contest-banner-closed', 'true');
+  });
+}
+</script>
+
+</body>
+</html>

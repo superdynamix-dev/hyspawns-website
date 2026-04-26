@@ -1,0 +1,4806 @@
+[
+  {
+    "id": "Antelope",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "passive",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Archaeopteryx",
+    "category": "Avian",
+    "subcategory": "Raptor",
+    "behavior": "passive",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Armadillo",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "passive",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Bat",
+    "category": "Avian",
+    "subcategory": "Aerial",
+    "behavior": "passive",
+    "hp": 15,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 1",
+      "Zone 2",
+      "Zone 4",
+      "World"
+    ]
+  },
+  {
+    "id": "Bat_Ice",
+    "category": "Avian",
+    "subcategory": "Aerial",
+    "behavior": "passive",
+    "hp": 25,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 3"
+    ]
+  },
+  {
+    "id": "Bear_Grizzly",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "hostile",
+    "hp": 124,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Bear_Polar",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "passive",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Bison",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 126,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Bison_Calf",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 94,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Bluebird",
+    "category": "Avian",
+    "subcategory": "Aerial",
+    "behavior": "passive",
+    "hp": 15,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Bluegill",
+    "category": "Aquatic",
+    "subcategory": "Freshwater",
+    "behavior": "passive",
+    "hp": 29,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Boar",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 81,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Boar_Piglet",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 29,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Bramblekin",
+    "category": "Intelligent",
+    "subcategory": "",
+    "behavior": "neutral",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Bramblekin_Shaman",
+    "category": "Intelligent",
+    "subcategory": "",
+    "behavior": "neutral",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Bunny",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 25,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Cactee",
+    "category": "Creature",
+    "subcategory": "Mythic",
+    "behavior": "passive",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Camel",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 126,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Camel_Calf",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 94,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Catfish",
+    "category": "Aquatic",
+    "subcategory": "Freshwater",
+    "behavior": "passive",
+    "hp": 29,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Chicken",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 29,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Chicken_Chick",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 7,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Chicken_Desert",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Chicken_Desert_Chick",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 8,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Chicken_Undead",
+    "category": "Undead",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Clownfish",
+    "category": "Aquatic",
+    "subcategory": "Marine",
+    "behavior": "passive",
+    "hp": 20,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Cow",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 103,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Cow_Calf",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 60,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Cow_Undead",
+    "category": "Undead",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 124,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Crab",
+    "category": "Aquatic",
+    "subcategory": "Marine",
+    "behavior": "passive",
+    "hp": 49,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Crawler_Void",
+    "category": "Void",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Portal",
+      "World"
+    ]
+  },
+  {
+    "id": "Crocodile",
+    "category": "Creature",
+    "subcategory": "Reptile",
+    "behavior": "hostile",
+    "hp": 145,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Crow",
+    "category": "Avian",
+    "subcategory": "Aerial",
+    "behavior": "passive",
+    "hp": 20,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Deer_Doe",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "passive",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Deer_Stag",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "passive",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Dragon_Fire",
+    "category": "Boss",
+    "subcategory": "",
+    "behavior": "boss",
+    "hp": 400,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Dragon_Frost",
+    "category": "Boss",
+    "subcategory": "",
+    "behavior": "boss",
+    "hp": 400,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Duck",
+    "category": "Avian",
+    "subcategory": "Fowl",
+    "behavior": "passive",
+    "hp": 25,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Dungeon_Scarak_Broodmother",
+    "category": "Intelligent",
+    "subcategory": "Dungeon",
+    "behavior": "hostile",
+    "hp": 145,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Dungeon_Scarak_Broodmother_Young",
+    "category": "Intelligent",
+    "subcategory": "Dungeon",
+    "behavior": "hostile",
+    "hp": 124,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Dungeon_Scarak_Defender",
+    "category": "Intelligent",
+    "subcategory": "Dungeon",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Dungeon_Scarak_Defender_Patrol",
+    "category": "Intelligent",
+    "subcategory": "Dungeon",
+    "behavior": "hostile",
+    "hp": 158,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Dungeon_Scarak_Fighter",
+    "category": "Intelligent",
+    "subcategory": "Dungeon",
+    "behavior": "hostile",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Dungeon_Scarak_Fighter_Patrol",
+    "category": "Intelligent",
+    "subcategory": "Dungeon",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Dungeon_Scarak_Louse",
+    "category": "Intelligent",
+    "subcategory": "Dungeon",
+    "behavior": "hostile",
+    "hp": 21,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Dungeon_Scarak_Seeker",
+    "category": "Intelligent",
+    "subcategory": "Dungeon",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Dungeon_Scarak_Seeker_Patrol",
+    "category": "Intelligent",
+    "subcategory": "Dungeon",
+    "behavior": "hostile",
+    "hp": 63,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Dungeon_Skeleton_Sand_Archer",
+    "category": "Undead",
+    "subcategory": "Dungeon",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Shortbow_Bronze"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Dungeon_Skeleton_Sand_Assassin",
+    "category": "Undead",
+    "subcategory": "Dungeon",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Club_Iron_Rusty"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Dungeon_Skeleton_Sand_Mage",
+    "category": "Undead",
+    "subcategory": "Dungeon",
+    "behavior": "hostile",
+    "hp": 49,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Spellbook_Grimoire_Purple"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Dungeon_Skeleton_Sand_Soldier",
+    "category": "Undead",
+    "subcategory": "Dungeon",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Club_Iron_Rusty"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Eel_Moray",
+    "category": "Aquatic",
+    "subcategory": "Abyssal",
+    "behavior": "passive",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 3",
+      "World"
+    ]
+  },
+  {
+    "id": "Emberwulf",
+    "category": "Creature",
+    "subcategory": "Mythic",
+    "behavior": "hostile",
+    "hp": 193,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Eye_Void",
+    "category": "Void",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Portal"
+    ]
+  },
+  {
+    "id": "Fen_Stalker",
+    "category": "Creature",
+    "subcategory": "Mythic",
+    "behavior": "passive",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Feran_Burrower",
+    "category": "Intelligent",
+    "subcategory": "Feran",
+    "behavior": "neutral",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Feran_Civilian",
+    "category": "Intelligent",
+    "subcategory": "Feran",
+    "behavior": "neutral",
+    "hp": 49,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Feran_Cub",
+    "category": "Intelligent",
+    "subcategory": "Feran",
+    "behavior": "neutral",
+    "hp": 29,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Feran_Longtooth",
+    "category": "Intelligent",
+    "subcategory": "Feran",
+    "behavior": "neutral",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Spear_Bone",
+      "Weapon_Spear_Bone"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Feran_Sharptooth",
+    "category": "Intelligent",
+    "subcategory": "Feran",
+    "behavior": "neutral",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Sword_Bone",
+      "Weapon_Axe_Bone"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Feran_Windwalker",
+    "category": "Intelligent",
+    "subcategory": "Feran",
+    "behavior": "neutral",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Finch_Green",
+    "category": "Avian",
+    "subcategory": "Aerial",
+    "behavior": "passive",
+    "hp": 15,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Flamingo",
+    "category": "Avian",
+    "subcategory": "Aerial",
+    "behavior": "passive",
+    "hp": 49,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Fox",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 1",
+      "World"
+    ]
+  },
+  {
+    "id": "Frog_Blue",
+    "category": "Creature",
+    "subcategory": "Critter",
+    "behavior": "passive",
+    "hp": 15,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Frog_Green",
+    "category": "Creature",
+    "subcategory": "Critter",
+    "behavior": "passive",
+    "hp": 15,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Frog_Orange",
+    "category": "Creature",
+    "subcategory": "Critter",
+    "behavior": "passive",
+    "hp": 15,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Frostgill",
+    "category": "Aquatic",
+    "subcategory": "Freshwater",
+    "behavior": "passive",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 3"
+    ]
+  },
+  {
+    "id": "Gecko",
+    "category": "Creature",
+    "subcategory": "Critter",
+    "behavior": "passive",
+    "hp": 25,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Ghoul",
+    "category": "Undead",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 193,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Goat",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 81,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Goat_Kid",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 36,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Goblin_Duke",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 226,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Goblin_Duke_Phase_2",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 320,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Goblin_Duke_Phase_3_Fast",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 200,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Goblin_Duke_Phase_3_Slow",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 200,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Goblin_Hermit",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 1",
+      "Zone 2"
+    ]
+  },
+  {
+    "id": "Goblin_Lobber",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 48,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 1",
+      "Zone 2",
+      "World"
+    ]
+  },
+  {
+    "id": "Goblin_Lobber_Patrol",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 48,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Goblin_Miner",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 1",
+      "Zone 2",
+      "World"
+    ]
+  },
+  {
+    "id": "Goblin_Miner_Patrol",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Goblin_Ogre",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 124,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Goblin_Ogre_Tutorial",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 124,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Goblin_Scavenger",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 54,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Goblin_Scavenger_Battleaxe",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 54,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Goblin_Scavenger_Sword",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 54,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Goblin_Scrapper",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 1",
+      "Zone 2",
+      "Zone 3",
+      "World"
+    ]
+  },
+  {
+    "id": "Goblin_Scrapper_Patrol",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Goblin_Thief",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Goblin_Thief_Patrol",
+    "category": "Intelligent",
+    "subcategory": "Goblin",
+    "behavior": "hostile",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Golem_Crystal_Earth",
+    "category": "Elemental",
+    "subcategory": "Golem",
+    "behavior": "hostile",
+    "hp": 160,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Golem_Crystal_Flame",
+    "category": "Elemental",
+    "subcategory": "Golem",
+    "behavior": "hostile",
+    "hp": 283,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Golem_Crystal_Frost",
+    "category": "Elemental",
+    "subcategory": "Golem",
+    "behavior": "hostile",
+    "hp": 224,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Golem_Crystal_Sand",
+    "category": "Elemental",
+    "subcategory": "Golem",
+    "behavior": "hostile",
+    "hp": 193,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Golem_Crystal_Thunder",
+    "category": "Elemental",
+    "subcategory": "Golem",
+    "behavior": "hostile",
+    "hp": 193,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Golem_Firesteel",
+    "category": "Elemental",
+    "subcategory": "Golem",
+    "behavior": "hostile",
+    "hp": 224,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 1",
+      "Zone 2",
+      "Zone 4",
+      "World"
+    ]
+  },
+  {
+    "id": "Golem_Guardian_Void",
+    "category": "Elemental",
+    "subcategory": "Golem",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Hatworm",
+    "category": "Creature",
+    "subcategory": "Mythic",
+    "behavior": "passive",
+    "hp": 20,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Hawk",
+    "category": "Avian",
+    "subcategory": "Raptor",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Hedera",
+    "category": "Intelligent",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 226,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Horse",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 124,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Horse_Foal",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 49,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Horse_Skeleton",
+    "category": "Undead",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 160,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Horse_Skeleton_Armored",
+    "category": "Undead",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 90,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Hound_Bleached",
+    "category": "Undead",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 126,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 4"
+    ]
+  },
+  {
+    "id": "Hyena",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "passive",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Jellyfish_Blue",
+    "category": "Aquatic",
+    "subcategory": "Marine",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Jellyfish_Cyan",
+    "category": "Aquatic",
+    "subcategory": "Marine",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Jellyfish_Green",
+    "category": "Aquatic",
+    "subcategory": "Marine",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Jellyfish_Man_Of_War",
+    "category": "Aquatic",
+    "subcategory": "Marine",
+    "behavior": "passive",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Jellyfish_Red",
+    "category": "Aquatic",
+    "subcategory": "Marine",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Jellyfish_Yellow",
+    "category": "Aquatic",
+    "subcategory": "Marine",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Klops_Gentleman",
+    "category": "Intelligent",
+    "subcategory": "",
+    "behavior": "passive",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Klops_Merchant",
+    "category": "Intelligent",
+    "subcategory": "",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Klops_Merchant_Patrol",
+    "category": "Intelligent",
+    "subcategory": "",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Klops_Merchant_Wandering",
+    "category": "Intelligent",
+    "subcategory": "",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Klops_Miner",
+    "category": "Intelligent",
+    "subcategory": "",
+    "behavior": "passive",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Klops_Miner_Patrol",
+    "category": "Intelligent",
+    "subcategory": "",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Kweebec_Elder",
+    "category": "Intelligent",
+    "subcategory": "Kweebec",
+    "behavior": "neutral",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Kweebec_Merchant",
+    "category": "Intelligent",
+    "subcategory": "Kweebec",
+    "behavior": "neutral",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Kweebec_Prisoner",
+    "category": "Intelligent",
+    "subcategory": "Kweebec",
+    "behavior": "neutral",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Kweebec_Razorleaf",
+    "category": "Intelligent",
+    "subcategory": "Kweebec",
+    "behavior": "neutral",
+    "hp": 105,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Kweebec_Razorleaf_Patrol",
+    "category": "Intelligent",
+    "subcategory": "Kweebec",
+    "behavior": "neutral",
+    "hp": 105,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Kweebec_Rootling",
+    "category": "Intelligent",
+    "subcategory": "Kweebec",
+    "behavior": "neutral",
+    "hp": 62,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Kweebec_Sapling",
+    "category": "Intelligent",
+    "subcategory": "Kweebec",
+    "behavior": "neutral",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Kweebec_Sapling_Orange",
+    "category": "Intelligent",
+    "subcategory": "Kweebec",
+    "behavior": "neutral",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Kweebec_Sapling_Pink",
+    "category": "Intelligent",
+    "subcategory": "Kweebec",
+    "behavior": "neutral",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Kweebec_Seedling",
+    "category": "Intelligent",
+    "subcategory": "Kweebec",
+    "behavior": "neutral",
+    "hp": 20,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Kweebec_Sproutling",
+    "category": "Intelligent",
+    "subcategory": "Kweebec",
+    "behavior": "neutral",
+    "hp": 29,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Kweebec_Sproutling_Patrol",
+    "category": "Intelligent",
+    "subcategory": "Kweebec",
+    "behavior": "neutral",
+    "hp": 29,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Larva_Silk",
+    "category": "Creature",
+    "subcategory": "Vermin",
+    "behavior": "passive",
+    "hp": 25,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 1"
+    ]
+  },
+  {
+    "id": "Larva_Void",
+    "category": "Void",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 36,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Portal"
+    ]
+  },
+  {
+    "id": "Leopard_Snow",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Lizard_Sand",
+    "category": "Creature",
+    "subcategory": "Reptile",
+    "behavior": "passive",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 2",
+      "World"
+    ]
+  },
+  {
+    "id": "Lobster",
+    "category": "Aquatic",
+    "subcategory": "Marine",
+    "behavior": "passive",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Meerkat",
+    "category": "Creature",
+    "subcategory": "Critter",
+    "behavior": "passive",
+    "hp": 29,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Minnow",
+    "category": "Aquatic",
+    "subcategory": "Freshwater",
+    "behavior": "passive",
+    "hp": 15,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Molerat",
+    "category": "Creature",
+    "subcategory": "Vermin",
+    "behavior": "passive",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 1"
+    ]
+  },
+  {
+    "id": "Moose_Bull",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "passive",
+    "hp": 124,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Moose_Cow",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "passive",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Mosshorn",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "passive",
+    "hp": 124,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Mosshorn_Plain",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "passive",
+    "hp": 124,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Mouflon",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 81,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Mouflon_Lamb",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 49,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Mouse",
+    "category": "Creature",
+    "subcategory": "Critter",
+    "behavior": "passive",
+    "hp": 15,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Outlander_Berserker",
+    "category": "Intelligent",
+    "subcategory": "Outlander",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Axe_Doomed",
+      "Weapon_Axe_Doomed"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Outlander_Brute",
+    "category": "Intelligent",
+    "subcategory": "Outlander",
+    "behavior": "hostile",
+    "hp": 124,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Battleaxe_Doomed"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Outlander_Cultist",
+    "category": "Intelligent",
+    "subcategory": "Outlander",
+    "behavior": "hostile",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Daggers_Doomed",
+      "Weapon_Daggers_Doomed"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Outlander_Hunter",
+    "category": "Intelligent",
+    "subcategory": "Outlander",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Shortbow_Doomed",
+      "Weapon_Daggers_Fang_Doomed"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Outlander_Marauder",
+    "category": "Intelligent",
+    "subcategory": "Outlander",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Sword_Doomed",
+      "Weapon_Sword_Doomed"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Outlander_Peon",
+    "category": "Intelligent",
+    "subcategory": "Outlander",
+    "behavior": "hostile",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [
+      "Tool_Pickaxe_Cobalt"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Outlander_Priest",
+    "category": "Intelligent",
+    "subcategory": "Outlander",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Club_Doomed",
+      "Weapon_Club_Doomed"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Outlander_Sorcerer",
+    "category": "Intelligent",
+    "subcategory": "Outlander",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Staff_Doomed",
+      "Weapon_Staff_Doomed"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Outlander_Stalker",
+    "category": "Intelligent",
+    "subcategory": "Outlander",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Crossbow_Iron",
+      "Weapon_Daggers_Doomed"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Owl_Brown",
+    "category": "Avian",
+    "subcategory": "Aerial",
+    "behavior": "passive",
+    "hp": 29,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Owl_Snow",
+    "category": "Avian",
+    "subcategory": "Aerial",
+    "behavior": "passive",
+    "hp": 29,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Parrot",
+    "category": "Avian",
+    "subcategory": "Aerial",
+    "behavior": "passive",
+    "hp": 29,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Penguin",
+    "category": "Avian",
+    "subcategory": "Aerial",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Pig",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Pig_Piglet",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 25,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Pig_Undead",
+    "category": "Undead",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Pig_Wild",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 74,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Pig_Wild_Piglet",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 30,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Pigeon",
+    "category": "Avian",
+    "subcategory": "Fowl",
+    "behavior": "passive",
+    "hp": 20,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Pike",
+    "category": "Aquatic",
+    "subcategory": "Freshwater",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Piranha",
+    "category": "Aquatic",
+    "subcategory": "Freshwater",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Piranha_Black",
+    "category": "Aquatic",
+    "subcategory": "Freshwater",
+    "behavior": "passive",
+    "hp": 45,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 3",
+      "World"
+    ]
+  },
+  {
+    "id": "Pterodactyl",
+    "category": "Avian",
+    "subcategory": "Raptor",
+    "behavior": "passive",
+    "hp": 60,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Pufferfish",
+    "category": "Aquatic",
+    "subcategory": "Marine",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Quest_Master",
+    "category": "Intelligent",
+    "subcategory": "",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Rabbit",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 49,
+    "tameable": true,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Ram",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 124,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Ram_Lamb",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 81,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Raptor_Cave",
+    "category": "Creature",
+    "subcategory": "Reptile",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Rat",
+    "category": "Creature",
+    "subcategory": "Vermin",
+    "behavior": "passive",
+    "hp": 21,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 1",
+      "Zone 2",
+      "Zone 3",
+      "Zone 4",
+      "World"
+    ]
+  },
+  {
+    "id": "Raven",
+    "category": "Avian",
+    "subcategory": "Aerial",
+    "behavior": "passive",
+    "hp": 49,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Rex_Cave",
+    "category": "Creature",
+    "subcategory": "Reptile",
+    "behavior": "hostile",
+    "hp": 400,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Risen_Gunner",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Gun_Blunderbuss_Rusty"
+    ],
+    "zones": []
+  },
+  {
+    "id": "Risen_Knight",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Sword_Steel_Rusty"
+    ],
+    "zones": []
+  },
+  {
+    "id": "Salmon",
+    "category": "Aquatic",
+    "subcategory": "Freshwater",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Scarak_Broodmother",
+    "category": "Intelligent",
+    "subcategory": "Scarak",
+    "behavior": "hostile",
+    "hp": 145,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Scarak_Defender",
+    "category": "Intelligent",
+    "subcategory": "Scarak",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Scarak_Defender_Patrol",
+    "category": "Intelligent",
+    "subcategory": "Scarak",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Scarak_Fighter",
+    "category": "Intelligent",
+    "subcategory": "Scarak",
+    "behavior": "hostile",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Scarak_Fighter_Patrol",
+    "category": "Intelligent",
+    "subcategory": "Scarak",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Scarak_Fighter_Royal_Guard",
+    "category": "Intelligent",
+    "subcategory": "Scarak",
+    "behavior": "hostile",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Scarak_Louse",
+    "category": "Intelligent",
+    "subcategory": "Scarak",
+    "behavior": "hostile",
+    "hp": 21,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 2"
+    ]
+  },
+  {
+    "id": "Scarak_Seeker",
+    "category": "Intelligent",
+    "subcategory": "Scarak",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Scarak_Seeker_Patrol",
+    "category": "Intelligent",
+    "subcategory": "Scarak",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Scorpion",
+    "category": "Creature",
+    "subcategory": "Vermin",
+    "behavior": "passive",
+    "hp": 124,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 2",
+      "World"
+    ]
+  },
+  {
+    "id": "Shadow_Knight",
+    "category": "Undead",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 400,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Shark_Hammerhead",
+    "category": "Aquatic",
+    "subcategory": "Abyssal",
+    "behavior": "passive",
+    "hp": 145,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Sheep",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 81,
+    "tameable": true,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Sheep_Lamb",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 29,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Shellfish_Lava",
+    "category": "Aquatic",
+    "subcategory": "Abyssal",
+    "behavior": "passive",
+    "hp": 29,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": 92,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Archer",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": 36,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Shortbow_Iron_Rusty"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Archer_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Archer_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Archmage",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": 88,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Staff_Wood_Rotten"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Archmage_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Archmage_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Burnt_Alchemist",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Bomb_Potion_Poison"
+    ],
+    "zones": [
+      "Zone 4",
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Alchemist_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Alchemist_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Burnt_Archer",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Shortbow_Iron_Rusty"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Archer_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Archer_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Burnt_Gunner",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Gun_Blunderbuss_Rusty"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Gunner_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Gunner_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Burnt_Knight",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Sword_Steel_Rusty"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Knight_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Knight_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Burnt_Lancer",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Battleaxe_Steel_Rusty"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Lancer_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Lancer_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Burnt_Praetorian",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": 226,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Longsword_Praetorian_NPC"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Praetorian_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Praetorian_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Burnt_Soldier",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": 124,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Sword_Steel_Rusty"
+    ],
+    "zones": [
+      "Zone 4",
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Soldier_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Soldier_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Burnt_Wizard",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Staff_Wizard"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Wizard_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Burnt_Wizard_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Burnt",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Fighter",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": 36,
+    "tameable": false,
+    "weapons": [
+      "Droplist:Skeleton_Fighter_Random_Weapon"
+    ],
+    "zones": [
+      "Zone 1",
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Fighter_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Fighter_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Frost_Archer",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Shortbow_Frost"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Archer_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Archer_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Frost_Archmage",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Staff_Frost"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Archmage_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Archmage_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Frost_Fighter",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Club_Iron_Rusty"
+    ],
+    "zones": [
+      "Zone 3",
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Fighter_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Fighter_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Frost_Knight",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Sword_Frost"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Knight_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Knight_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Frost_Mage",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Spellbook_Frost"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Mage_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Mage_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Frost_Ranger",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Crossbow_Ancient_Steel"
+    ],
+    "zones": [
+      "Zone 3",
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Ranger_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Ranger_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Frost_Scout",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": 49,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Shortbow_Crude"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Scout_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Scout_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Frost_Soldier",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Axe_Iron_Rusty"
+    ],
+    "zones": [
+      "Zone 3",
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Soldier_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Frost_Soldier_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Frost",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Incandescent_Fighter",
+    "category": "Undead",
+    "subcategory": "Skeleton_Incandescent",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Sword_Steel_Incandescent"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Incandescent_Fighter_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Incandescent",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Incandescent_Fighter_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Incandescent",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Incandescent_Footman",
+    "category": "Undead",
+    "subcategory": "Skeleton_Incandescent",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Spear_Double_Incandescent"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Incandescent_Footman_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Incandescent",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Incandescent_Footman_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Incandescent",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Incandescent_Head",
+    "category": "Undead",
+    "subcategory": "Skeleton_Incandescent",
+    "behavior": "hostile",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Incandescent_Mage",
+    "category": "Undead",
+    "subcategory": "Skeleton_Incandescent",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Spellbook_Fire"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Incandescent_Mage_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Incandescent",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Incandescent_Mage_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Incandescent",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Knight",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Sword_Steel_Rusty"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Knight_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Knight_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Mage",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": 49,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Wand_Wood_Rotten"
+    ],
+    "zones": [
+      "Zone 1",
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Mage_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Mage_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Pirate_Captain",
+    "category": "Undead",
+    "subcategory": "Skeleton_Pirate",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Sword_Cutlass"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Pirate_Captain_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Pirate",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Pirate_Captain_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Pirate",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Pirate_Gunner",
+    "category": "Undead",
+    "subcategory": "Skeleton_Pirate",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Gun_Blunderbuss"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Pirate_Gunner_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Pirate",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Pirate_Gunner_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Pirate",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Pirate_Striker",
+    "category": "Undead",
+    "subcategory": "Skeleton_Pirate",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Sword_Cutlass"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Pirate_Striker_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Pirate",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Pirate_Striker_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Pirate",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Ranger",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": 49,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Crossbow_Ancient_Steel"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Ranger_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Ranger_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Sand_Archer",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Shortbow_Bronze"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Archer_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Archer_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Sand_Archmage",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Staff_Bronze"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Archmage_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Archmage_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Sand_Assassin",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Daggers_Bronze_Ancient"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Assassin_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Assassin_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Sand_Guard",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Sword_Bronze"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Guard_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Guard_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Sand_Mage",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": 49,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Spellbook_Grimoire_Purple"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Mage_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Mage_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Sand_Ranger",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": 29,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Crossbow_Ancient_Steel"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Ranger_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Ranger_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Sand_Scout",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": 29,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Shortbow_Crude"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Scout_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Scout_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Sand_Soldier",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Spear_Bronze"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Soldier_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Sand_Soldier_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton_Sand",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Scout",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Shortbow_Crude"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Scout_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Scout_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skeleton_Soldier",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Axe_Iron_Rusty"
+    ],
+    "zones": [
+      "Zone 1",
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Soldier_Patrol",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Skeleton_Soldier_Wander",
+    "category": "Undead",
+    "subcategory": "Skeleton",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skrill",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 30,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Skrill_Chick",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 15,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Slothian",
+    "category": "Intelligent",
+    "subcategory": "",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Slug_Magma",
+    "category": "Creature",
+    "subcategory": "Vermin",
+    "behavior": "passive",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Snail_Frost",
+    "category": "Creature",
+    "subcategory": "Vermin",
+    "behavior": "passive",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Snail_Magma",
+    "category": "Creature",
+    "subcategory": "Vermin",
+    "behavior": "passive",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 1",
+      "Zone 2",
+      "Zone 4"
+    ]
+  },
+  {
+    "id": "Snake_Cobra",
+    "category": "Creature",
+    "subcategory": "Vermin",
+    "behavior": "passive",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 2",
+      "World"
+    ]
+  },
+  {
+    "id": "Snake_Marsh",
+    "category": "Creature",
+    "subcategory": "Vermin",
+    "behavior": "passive",
+    "hp": 36,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Snake_Rattle",
+    "category": "Creature",
+    "subcategory": "Vermin",
+    "behavior": "passive",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Snapdragon",
+    "category": "Creature",
+    "subcategory": "Mythic",
+    "behavior": "passive",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Snapjaw",
+    "category": "Aquatic",
+    "subcategory": "Freshwater",
+    "behavior": "passive",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Spark_Living",
+    "category": "Creature",
+    "subcategory": "Mythic",
+    "behavior": "passive",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 1",
+      "Zone 2",
+      "Zone 4"
+    ]
+  },
+  {
+    "id": "Sparrow",
+    "category": "Avian",
+    "subcategory": "Aerial",
+    "behavior": "passive",
+    "hp": 15,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Spawn_Void",
+    "category": "Void",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 193,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Longsword_Void"
+    ],
+    "zones": [
+      "Portal",
+      "World"
+    ]
+  },
+  {
+    "id": "Spectre_Void",
+    "category": "Void",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Spider",
+    "category": "Creature",
+    "subcategory": "Vermin",
+    "behavior": "passive",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Spider_Cave",
+    "category": "Creature",
+    "subcategory": "Vermin",
+    "behavior": "passive",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 1",
+      "Zone 3",
+      "World"
+    ]
+  },
+  {
+    "id": "Spirit_Ember",
+    "category": "Elemental",
+    "subcategory": "Spirit",
+    "behavior": "hostile",
+    "hp": 126,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Spirit_Frost",
+    "category": "Elemental",
+    "subcategory": "Spirit",
+    "behavior": "hostile",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 3"
+    ]
+  },
+  {
+    "id": "Spirit_Root",
+    "category": "Elemental",
+    "subcategory": "Spirit",
+    "behavior": "hostile",
+    "hp": 49,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 1",
+      "World"
+    ]
+  },
+  {
+    "id": "Spirit_Thunder",
+    "category": "Elemental",
+    "subcategory": "Spirit",
+    "behavior": "hostile",
+    "hp": 249,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 2"
+    ]
+  },
+  {
+    "id": "Squirrel",
+    "category": "Creature",
+    "subcategory": "Critter",
+    "behavior": "passive",
+    "hp": 15,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Tang_Blue",
+    "category": "Aquatic",
+    "subcategory": "Marine",
+    "behavior": "passive",
+    "hp": 20,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Tang_Chevron",
+    "category": "Aquatic",
+    "subcategory": "Marine",
+    "behavior": "passive",
+    "hp": 20,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Tang_Lemon_Peel",
+    "category": "Aquatic",
+    "subcategory": "Marine",
+    "behavior": "passive",
+    "hp": 20,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Tang_Sailfin",
+    "category": "Aquatic",
+    "subcategory": "Marine",
+    "behavior": "passive",
+    "hp": 20,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Temple_Bluebird",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": 18,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Bunny",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Deer_Doe",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Deer_Stag",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Duck",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": 18,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Feran",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Feran_Longtooth",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Finch_Green",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": 13,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Frog_Blue",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Frog_Green",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Frog_Orange",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Klops",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Klops_Merchant",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Temple_Kweebec",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Kweebec_Elder",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Kweebec_Merchant",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Kweebec_Razorleaf",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Kweebec_Razorleaf_Patrol",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Kweebec_Razorleaf_Patrol1",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Kweebec_Razorleaf_Patrol2",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Kweebec_Razorleaf_Patrol3",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Kweebec_Razorleaf_Patrol4",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Kweebec_Razorleaf_Patrol5",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Kweebec_Rootling_Static",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Kweebec_Seedling",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Temple_Kweebec_Seedling_Static",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Kweebec_Static",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Mithril_Guard",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Owl_Brown",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": 29,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Temple_Squirrel",
+    "category": "Intelligent",
+    "subcategory": "Temple",
+    "behavior": "passive",
+    "hp": null,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Tetrabird",
+    "category": "Avian",
+    "subcategory": "Raptor",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Tiger_Sabertooth",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "hostile",
+    "hp": 124,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Toad_Rhino",
+    "category": "Creature",
+    "subcategory": "Reptile",
+    "behavior": "passive",
+    "hp": 124,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Toad_Rhino_Magma",
+    "category": "Creature",
+    "subcategory": "Reptile",
+    "behavior": "passive",
+    "hp": 124,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 1",
+      "Zone 2",
+      "Zone 4",
+      "World"
+    ]
+  },
+  {
+    "id": "Tortoise",
+    "category": "Creature",
+    "subcategory": "Reptile",
+    "behavior": "passive",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Trillodon",
+    "category": "Creature",
+    "subcategory": "Mythic",
+    "behavior": "passive",
+    "hp": 145,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Trilobite",
+    "category": "Aquatic",
+    "subcategory": "Abyssal",
+    "behavior": "passive",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Trilobite_Black",
+    "category": "Aquatic",
+    "subcategory": "Abyssal",
+    "behavior": "passive",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Trork_Brawler",
+    "category": "Intelligent",
+    "subcategory": "Trork",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Club_Crude",
+      "Rubble_Stone"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Trork_Chieftain",
+    "category": "Intelligent",
+    "subcategory": "Trork",
+    "behavior": "hostile",
+    "hp": 124,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Trork_Doctor_Witch",
+    "category": "Intelligent",
+    "subcategory": "Trork",
+    "behavior": "hostile",
+    "hp": 74,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Staff_Crystal_Fire_Trork",
+      "Weapon_Sword_Stone_Trork"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Trork_Guard",
+    "category": "Intelligent",
+    "subcategory": "Trork",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Spear_Stone_Trork",
+      "Weapon_Daggers_Stone_Trork"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Trork_Hunter",
+    "category": "Intelligent",
+    "subcategory": "Trork",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Sword_Stone_Trork",
+      "Weapon_Axe_Stone_Trork"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Trork_Mauler",
+    "category": "Intelligent",
+    "subcategory": "Trork",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Mace_Crude",
+      "Rubble_Stone"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Trork_Sentry",
+    "category": "Intelligent",
+    "subcategory": "Trork",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Spear_Stone_Trork",
+      "Weapon_Spear_Stone_Trork"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Trork_Sentry_Patrol",
+    "category": "Intelligent",
+    "subcategory": "Trork",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Spear_Stone_Trork",
+      "Weapon_Spear_Stone_Trork"
+    ],
+    "zones": []
+  },
+  {
+    "id": "Trork_Shaman",
+    "category": "Intelligent",
+    "subcategory": "Trork",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Staff_Crystal_Fire_Trork",
+      "Weapon_Daggers_Stone_Trork"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Trork_Unarmed",
+    "category": "Intelligent",
+    "subcategory": "Trork",
+    "behavior": "hostile",
+    "hp": 42,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Trork_Warrior",
+    "category": "Intelligent",
+    "subcategory": "Trork",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Battleaxe_Stone_Trork",
+      "Rubble_Stone_Medium"
+    ],
+    "zones": [
+      "Zone 1",
+      "World"
+    ]
+  },
+  {
+    "id": "Trork_Warrior_Patrol",
+    "category": "Intelligent",
+    "subcategory": "Trork",
+    "behavior": "hostile",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Battleaxe_Stone_Trork",
+      "Rubble_Stone_Medium"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Trout_Rainbow",
+    "category": "Aquatic",
+    "subcategory": "Freshwater",
+    "behavior": "passive",
+    "hp": 29,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Tuluk_Fisherman",
+    "category": "Intelligent",
+    "subcategory": "Tuluk",
+    "behavior": "neutral",
+    "hp": 124,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Spear_Fishbone",
+      "Weapon_Spear_Fishbone"
+    ],
+    "zones": []
+  },
+  {
+    "id": "Turkey",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 38,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Turkey_Chick",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 15,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Vulture",
+    "category": "Avian",
+    "subcategory": "Raptor",
+    "behavior": "passive",
+    "hp": 61,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Warthog",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 103,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Warthog_Piglet",
+    "category": "Creature",
+    "subcategory": "Livestock",
+    "behavior": "passive",
+    "hp": 81,
+    "tameable": true,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Werewolf",
+    "category": "Undead",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 283,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Whale_Humpback",
+    "category": "Aquatic",
+    "subcategory": "Abyssal",
+    "behavior": "passive",
+    "hp": 400,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Wolf_Black",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "hostile",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Wolf_Outlander_Priest",
+    "category": "Intelligent",
+    "subcategory": "Outlander",
+    "behavior": "hostile",
+    "hp": 107,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Wolf_Outlander_Sorcerer",
+    "category": "Intelligent",
+    "subcategory": "Outlander",
+    "behavior": "hostile",
+    "hp": 118,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Wolf_Trork_Hunter",
+    "category": "Intelligent",
+    "subcategory": "Trork",
+    "behavior": "hostile",
+    "hp": 38,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Wolf_Trork_Shaman",
+    "category": "Intelligent",
+    "subcategory": "Trork",
+    "behavior": "hostile",
+    "hp": 118,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Wolf_White",
+    "category": "Creature",
+    "subcategory": "Mammal",
+    "behavior": "passive",
+    "hp": 103,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Woodpecker",
+    "category": "Avian",
+    "subcategory": "Aerial",
+    "behavior": "passive",
+    "hp": 15,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Wraith",
+    "category": "Undead",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 193,
+    "tameable": false,
+    "weapons": [
+      "Weapon_Battleaxe_Scythe_Void"
+    ],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Wraith_Lantern",
+    "category": "Undead",
+    "subcategory": "",
+    "behavior": "hostile",
+    "hp": 30,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Yeti",
+    "category": "Creature",
+    "subcategory": "Mythic",
+    "behavior": "hostile",
+    "hp": 226,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Zombie",
+    "category": "Undead",
+    "subcategory": "Zombie",
+    "behavior": "hostile",
+    "hp": 49,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 4",
+      "World"
+    ]
+  },
+  {
+    "id": "Zombie_Aberrant",
+    "category": "Undead",
+    "subcategory": "Zombie",
+    "behavior": "hostile",
+    "hp": 400,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Zombie_Aberrant_Big",
+    "category": "Undead",
+    "subcategory": "Zombie",
+    "behavior": "hostile",
+    "hp": 341,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Zombie_Aberrant_Small",
+    "category": "Undead",
+    "subcategory": "Zombie",
+    "behavior": "hostile",
+    "hp": 126,
+    "tameable": false,
+    "weapons": [],
+    "zones": []
+  },
+  {
+    "id": "Zombie_Burnt",
+    "category": "Undead",
+    "subcategory": "Zombie",
+    "behavior": "hostile",
+    "hp": 126,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "Zone 4"
+    ]
+  },
+  {
+    "id": "Zombie_Frost",
+    "category": "Undead",
+    "subcategory": "Zombie",
+    "behavior": "hostile",
+    "hp": 81,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  },
+  {
+    "id": "Zombie_Sand",
+    "category": "Undead",
+    "subcategory": "Zombie",
+    "behavior": "hostile",
+    "hp": 49,
+    "tameable": false,
+    "weapons": [],
+    "zones": [
+      "World"
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+# HySpawns — Hytale Spawn Catalog
+# https://hyspawns.com/
+
+## What is HySpawns?
+HySpawns is a free reference tool that catalogs all 413 spawnable NPC entities in Hytale. It allows Hytale modders and server administrators to search, filter by category/zone/behavior, and copy spawn commands.
+
+## Key Facts
+- Total entities: 413 spawnable NPCs
+- Categories: Undead (140), Intelligent (121), Creature (84), Aquatic (30), Avian (20), Elemental (11), Void (5), Boss (2)
+- Behavior types: Hostile, Passive, Neutral, Tameable, Boss
+- Zones: Zone 1-4, World, Portal
+- Copy formats: /npc spawn EntityId, /npc spawn EntityId ~ ~ ~, JSON NPCId
+
+## How to spawn entities in Hytale
+Use the built-in server command:
+- /npc spawn Bear_Grizzly — spawns entity at player location
+- /npc spawn Bear_Grizzly ~ ~ ~ — spawns at specific coordinates
+
+## Entity ID Format
+Hytale entity IDs use PascalCase with underscores: Bear_Grizzly, Goblin_Scrapper, Skeleton_Frost_Knight, Dragon_Fire
+Examples per category:
+- Creature: Cow, Bunny, Deer_Stag, Fox, Chicken, Boar
+- Intelligent: Goblin_Scrapper, Trork_Warrior, Kweebec_Villager, Outlander_Hunter
+- Undead: Skeleton_Sand_Soldier, Zombie, Ghoul, Risen_Knight
+- Aquatic: Salmon, Shark_Hammerhead, Jellyfish_Blue
+- Avian: Crow, Hawk, Penguin, Pterodactyl
+- Elemental: Golem_Crystal_Earth, Golem_Crystal_Frost
+- Boss: Dragon_Fire, Dragon_Frost
+- Void: Crawler_Void
+
+## Using entities in Hytale mods
+In NPC role JSON configs:
+- "NPCId": "EntityId" — reference entity in spawn beacons/markers
+- Roles defined in Server/NPC/Roles/ with fields: MaxHealth, Weapons, AttitudeGroup, IsTameable
+
+## Sister Site
+- HySounds — Hytale Sound Catalog: https://hysounds.com/
+
+## About
+Built by Scruby Companion
+- CurseForge: https://www.curseforge.com/hytale/mods/scruby-companion
+- Source: https://github.com/superdynamix-dev/hyspawns-website
+- License: All Rights Reserved
